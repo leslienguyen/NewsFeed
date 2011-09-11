@@ -1,0 +1,2 @@
+/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UINavigationBar+Custom.m:9:28: error: LNNavigationBar.h: No such file or directory
+/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UINavigationBar+Custom.m:23: warning: cannot find interface declaration for 'LNNavigationBar'
