@@ -232,6 +232,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -278,8 +280,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>11</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -303,7 +305,7 @@
 							<real>271</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>343 63 1403 961 0 0 1680 1028 </string>
+						<string>122 62 1403 961 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,14 +316,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>JSONKit.h</string>
+								<string>NewsFeedController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>JSONKit.h</string>
+										<string>NewsFeedController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2BE2B765141E04A50019A427</string>
+										<string>2BE2B76B141E07190019A427</string>
 										<key>history</key>
 										<array>
 											<string>2BA581D21415772900CCDBB4</string>
@@ -343,15 +343,12 @@
 											<string>2BE2B459141D85410019A427</string>
 											<string>2BE2B45A141D85410019A427</string>
 											<string>2BE2B4D4141D90710019A427</string>
-											<string>2BE2B4DE141D909F0019A427</string>
 											<string>2BE2B567141DAA1F0019A427</string>
 											<string>2BE2B5B9141DB54F0019A427</string>
 											<string>2BE2B624141DCCAF0019A427</string>
 											<string>2BE2B625141DCCAF0019A427</string>
-											<string>2BE2B68B141DEAD30019A427</string>
 											<string>2BE2B69B141DEC320019A427</string>
 											<string>2BE2B6A4141DEC490019A427</string>
-											<string>2BE2B6A5141DEC490019A427</string>
 											<string>2BE2B6AB141DED1E0019A427</string>
 											<string>2BE2B6B6141DF0FC0019A427</string>
 											<string>2BE2B6BC141DF17A0019A427</string>
@@ -360,9 +357,12 @@
 											<string>2BE2B6C9141DF2A30019A427</string>
 											<string>2BE2B753141E00680019A427</string>
 											<string>2BE2B761141E04A50019A427</string>
-											<string>2BE2B762141E04A50019A427</string>
 											<string>2BE2B763141E04A50019A427</string>
-											<string>2BE2B764141E04A50019A427</string>
+											<string>2BE2B766141E07190019A427</string>
+											<string>2BE2B767141E07190019A427</string>
+											<string>2BE2B768141E07190019A427</string>
+											<string>2BE2B769141E07190019A427</string>
+											<string>2BE2B76A141E07190019A427</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -376,7 +376,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1110, 775}}</string>
 								<key>RubberWindowFrame</key>
-								<string>343 63 1403 961 0 0 1680 1028 </string>
+								<string>122 62 1403 961 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -396,7 +396,7 @@
 								<key>Frame</key>
 								<string>{{0, 780}, {1110, 140}}</string>
 								<key>RubberWindowFrame</key>
-								<string>343 63 1403 961 0 0 1680 1028 </string>
+								<string>122 62 1403 961 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -570,7 +570,7 @@
 		<string>/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>343 63 1403 961 0 0 1680 1028 </string>
+	<string>122 62 1403 961 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
