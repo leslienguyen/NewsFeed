@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				2BA581891414702B00CCDBB4 /* External */,
-				2BA5811E141461CF00CCDBB4 /* ASIHTTPRequest */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -248,8 +247,8 @@
 		2BA581891414702B00CCDBB4 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				2BA581CE1415765400CCDBB4 /* JSONKit.h */,
-				2BA581CF1415765400CCDBB4 /* JSONKit.m */,
+				2BE2B760141E04920019A427 /* JSONKit */,
+				2BA5811E141461CF00CCDBB4 /* ASIHTTPRequest */,
 				2BA5818A1414704B00CCDBB4 /* Reachability */,
 			);
 			name = External;
@@ -270,6 +269,15 @@
 				2BE2B532141D98D10019A427 /* MainWindow-iPad.xib */,
 			);
 			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		2BE2B760141E04920019A427 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				2BA581CE1415765400CCDBB4 /* JSONKit.h */,
+				2BA581CF1415765400CCDBB4 /* JSONKit.m */,
+			);
+			name = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
