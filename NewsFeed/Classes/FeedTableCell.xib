@@ -408,11 +408,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">ImageViewRight</string>
+						<string key="label">imageViewRight</string>
 						<reference key="source" ref="871402388"/>
 						<reference key="destination" ref="1028166526"/>
 					</object>
-					<int key="connectionID">55</int>
+					<int key="connectionID">56</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -654,7 +654,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">55</int>
+			<int key="maxID">56</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
