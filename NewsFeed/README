@@ -1,0 +1,9 @@
+This appl pulls in the TechCrunch RSS feed and displays the headlines with images for quick view of the articles. User can then choose to view the detail of each article. The number of articles is set to 18. There is also the option to view the articles in a grid or table layout.
+
+Known issues:
+- Tapping on the title does not push in the detail view. Tapping the image will.
+- The progress indicator for the webview moves
+
+Future improvements:
+- Pull in more than just the TechCrunch feed
+- Improve speed and responsiveness for fetching and display the articles
