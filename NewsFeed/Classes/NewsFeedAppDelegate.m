@@ -45,6 +45,8 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+	
+	[[NewsFeedController sharedController] saveCache];	
 }
 
 
@@ -63,10 +65,8 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    /*
-     Called when the application is about to terminate.
-     See also applicationDidEnterBackground:.
-     */
+	
+	[[NewsFeedController sharedController] saveCache];	
 }
 
 
@@ -81,8 +81,8 @@
 
 
 - (void)dealloc {
-	[navigationController release];
-	[window release];
+	[navigationController release]; navigationController = nil;
+	[window release]; window = nil;
 	[super dealloc];
 }
 

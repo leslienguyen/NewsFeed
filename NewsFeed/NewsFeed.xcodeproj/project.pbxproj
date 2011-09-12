@@ -16,8 +16,6 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		2B7901F6141731820025F1F3 /* ArticleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7901F5141731820025F1F3 /* ArticleWebViewController.m */; };
-		2B79023414173E300025F1F3 /* LNNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B79023314173E300025F1F3 /* LNNavigationBar.m */; };
-		2B7902371417428E0025F1F3 /* customNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7902361417428E0025F1F3 /* customNavBar.png */; };
 		2B9FCE96141C40C1000022AD /* UIImage+LNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9FCE95141C40C1000022AD /* UIImage+LNExtensions.m */; };
 		2BA5813B14146F2800CCDBB4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */; };
 		2BA5813D14146F3600CCDBB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5813C14146F3600CCDBB4 /* SystemConfiguration.framework */; };
@@ -38,6 +36,12 @@
 		2BA5821914158D2D00CCDBB4 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BA5821814158D2D00CCDBB4 /* FeedTableCell.xib */; };
 		2BA5822414159CEA00CCDBB4 /* FeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5822314159CEA00CCDBB4 /* FeedTableCell.m */; };
 		2BA5826D1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5826C1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.m */; };
+		2BE2B533141D98D10019A427 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B532141D98D10019A427 /* MainWindow-iPad.xib */; };
+		2BE2B54D141D9C040019A427 /* FeedTableCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B54C141D9C040019A427 /* FeedTableCell-iPad.xib */; };
+		2BE2B6D8141DF7080019A427 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B6D6141DF7080019A427 /* Default-Portrait.png */; };
+		2BE2B6D9141DF7080019A427 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B6D7141DF7080019A427 /* Default.png */; };
+		2BE2B6EC141DF9780019A427 /* CrunchTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B6EB141DF9780019A427 /* CrunchTitle.png */; };
+		2BE2B730141DFD640019A427 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B72F141DFD640019A427 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +59,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B7901F4141731820025F1F3 /* ArticleWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleWebViewController.h; sourceTree = "<group>"; };
 		2B7901F5141731820025F1F3 /* ArticleWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleWebViewController.m; sourceTree = "<group>"; };
-		2B79023214173E300025F1F3 /* LNNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNavigationBar.h; sourceTree = "<group>"; };
-		2B79023314173E300025F1F3 /* LNNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNavigationBar.m; sourceTree = "<group>"; };
-		2B7902361417428E0025F1F3 /* customNavBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = customNavBar.png; path = images/customNavBar.png; sourceTree = "<group>"; };
 		2B9FCE94141C40C1000022AD /* UIImage+LNExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LNExtensions.h"; sourceTree = "<group>"; };
 		2B9FCE95141C40C1000022AD /* UIImage+LNExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LNExtensions.m"; sourceTree = "<group>"; };
 		2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -92,11 +93,17 @@
 		2BA581CF1415765400CCDBB4 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		2BA581E414157CDC00CCDBB4 /* NewsFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedItem.h; sourceTree = "<group>"; };
 		2BA581E514157CDC00CCDBB4 /* NewsFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedItem.m; sourceTree = "<group>"; };
-		2BA5821814158D2D00CCDBB4 /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
+		2BA5821814158D2D00CCDBB4 /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedTableCell.xib; path = Classes/FeedTableCell.xib; sourceTree = "<group>"; };
 		2BA5822214159CEA00CCDBB4 /* FeedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableCell.h; sourceTree = "<group>"; };
 		2BA5822314159CEA00CCDBB4 /* FeedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableCell.m; sourceTree = "<group>"; };
 		2BA5826B1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+LNExtension.h"; sourceTree = "<group>"; };
 		2BA5826C1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+LNExtension.m"; sourceTree = "<group>"; };
+		2BE2B532141D98D10019A427 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		2BE2B54C141D9C040019A427 /* FeedTableCell-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "FeedTableCell-iPad.xib"; path = "Classes/FeedTableCell-iPad.xib"; sourceTree = "<group>"; };
+		2BE2B6D6141DF7080019A427 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "images/Default-Portrait.png"; sourceTree = "<group>"; };
+		2BE2B6D7141DF7080019A427 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		2BE2B6EB141DF9780019A427 /* CrunchTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CrunchTitle.png; path = images/CrunchTitle.png; sourceTree = "<group>"; };
+		2BE2B72F141DFD640019A427 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* NewsFeed-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NewsFeed-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,15 +136,12 @@
 				2BA58191141555AC00CCDBB4 /* NewsFeedController.m */,
 				2BA581E414157CDC00CCDBB4 /* NewsFeedItem.h */,
 				2BA581E514157CDC00CCDBB4 /* NewsFeedItem.m */,
-				2BA5821814158D2D00CCDBB4 /* FeedTableCell.xib */,
 				2BA5822214159CEA00CCDBB4 /* FeedTableCell.h */,
 				2BA5822314159CEA00CCDBB4 /* FeedTableCell.m */,
 				2BA5826B1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.h */,
 				2BA5826C1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.m */,
 				2B7901F4141731820025F1F3 /* ArticleWebViewController.h */,
 				2B7901F5141731820025F1F3 /* ArticleWebViewController.m */,
-				2B79023214173E300025F1F3 /* LNNavigationBar.h */,
-				2B79023314173E300025F1F3 /* LNNavigationBar.m */,
 				2B9FCE94141C40C1000022AD /* UIImage+LNExtensions.h */,
 				2B9FCE95141C40C1000022AD /* UIImage+LNExtensions.m */,
 			);
@@ -160,6 +164,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				2BE2B531141D98D10019A427 /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */,
@@ -183,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				2B790235141742800025F1F3 /* Image */,
+				2BE2B54C141D9C040019A427 /* FeedTableCell-iPad.xib */,
+				2BA5821814158D2D00CCDBB4 /* FeedTableCell.xib */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* NewsFeed-Info.plist */,
@@ -203,7 +210,10 @@
 		2B790235141742800025F1F3 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				2B7902361417428E0025F1F3 /* customNavBar.png */,
+				2BE2B72F141DFD640019A427 /* Icon.png */,
+				2BE2B6EB141DF9780019A427 /* CrunchTitle.png */,
+				2BE2B6D6141DF7080019A427 /* Default-Portrait.png */,
+				2BE2B6D7141DF7080019A427 /* Default.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -252,6 +262,14 @@
 				2BA5818C1414704B00CCDBB4 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		2BE2B531141D98D10019A427 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				2BE2B532141D98D10019A427 /* MainWindow-iPad.xib */,
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +325,12 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				2BA5821914158D2D00CCDBB4 /* FeedTableCell.xib in Resources */,
-				2B7902371417428E0025F1F3 /* customNavBar.png in Resources */,
+				2BE2B533141D98D10019A427 /* MainWindow-iPad.xib in Resources */,
+				2BE2B54D141D9C040019A427 /* FeedTableCell-iPad.xib in Resources */,
+				2BE2B6D8141DF7080019A427 /* Default-Portrait.png in Resources */,
+				2BE2B6D9141DF7080019A427 /* Default.png in Resources */,
+				2BE2B6EC141DF9780019A427 /* CrunchTitle.png in Resources */,
+				2BE2B730141DFD640019A427 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +359,6 @@
 				2BA5822414159CEA00CCDBB4 /* FeedTableCell.m in Sources */,
 				2BA5826D1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.m in Sources */,
 				2B7901F6141731820025F1F3 /* ArticleWebViewController.m in Sources */,
-				2B79023414173E300025F1F3 /* LNNavigationBar.m in Sources */,
 				2B9FCE96141C40C1000022AD /* UIImage+LNExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -355,6 +378,8 @@
 				GCC_PREFIX_HEADER = NewsFeed_Prefix.pch;
 				INFOPLIST_FILE = "NewsFeed-Info.plist";
 				PRODUCT_NAME = NewsFeed;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -362,11 +387,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NewsFeed_Prefix.pch;
 				INFOPLIST_FILE = "NewsFeed-Info.plist";
 				PRODUCT_NAME = NewsFeed;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -1,13 +1,18 @@
 TNewsFeed
 v7
 r0
-t337400943.857374
+t337510504.322731
 cCheck dependencies
 cProcessInfoPlistFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Info.plist NewsFeed-Info.plist
 cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
 cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
 cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-cCpResource build/Debug-iphonesimulator/NewsFeed.app/customNavBar.png images/customNavBar.png
+cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
+cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
+cCpResource build/Debug-iphonesimulator/NewsFeed.app/Default-Portrait.png images/Default-Portrait.png
+cCpResource build/Debug-iphonesimulator/NewsFeed.app/Default.png images/Default.png
+cCpResource build/Debug-iphonesimulator/NewsFeed.app/CrunchTitle.png images/CrunchTitle.png
+cCpResource build/Debug-iphonesimulator/NewsFeed.app/Icon.png images/Icon.png
 cProcessPCH /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch.gch NewsFeed_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/main.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedAppDelegate.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -27,7 +32,6 @@ cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-norm
 cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCell.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NSNotificationCenter+LNExtension.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ArticleWebViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/LNNavigationBar.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/LNNavigationBar.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UIImage+LNExtensions.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed normal i386
 cGenerateDSYMFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app.dSYM /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed
@@ -426,33 +430,50 @@ t1313840955
 s1656
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.h
-c000000004E6C17760000000000000169
-t1315706742
-s361
+c000000004E6DB4C700000000000001AD
+t1315812551
+s429
 i<Foundation/Foundation.h>
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m
-c000000004E6C177700000000000009F1
-t1315706743
-s2545
+c000000004E6DB4A30000000000000A6F
+t1315812515
+s2671
 i"ArticleWebViewController.h"
 
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
+c000000004E6DC0D2000000000000E52F
+t1315815634
+s58671
+
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.h
-c000000004E6C17770000000000000343
-t1315706743
-s835
+c000000004E6DBAA800000000000006EF
+t1315814056
+s1775
 i<Foundation/Foundation.h>
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m
-c000000004E6C17770000000000000308
-t1315706743
-s776
+c000000004E6DB9F70000000000000698
+t1315813879
+s1688
 i"FeedTableCell.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-c000000004E6C18EA0000000000008005
-t1315707114
-s32773
+c000000004E6DBBEF000000000000BBD3
+t1315814383
+s48083
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCellForIpad.h
+c000000004E6D851100000000000000EC
+t1315800337
+s236
+i<Foundation/Foundation.h>
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCellForIpad.m
+c000000004E6D851100000000000000E0
+t1315800337
+s224
+i"FeedTableCellForIpad.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/LNNavigationBar.h
 c000000004E6C177700000000000000EA
@@ -485,24 +506,24 @@ s466
 i<UIKit/UIKit.h>
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m
-c000000004E6C17770000000000000ADF
-t1315706743
-s2783
+c000000004E6D58E40000000000000B02
+t1315789028
+s2818
 i"NewsFeedAppDelegate.h"
 i"RootViewController.h"
 i"NewsFeedController.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.h
-c000000004E6C177700000000000001EF
-t1315706743
-s495
+c000000004E6D98F8000000000000025A
+t1315805432
+s602
 i<Foundation/Foundation.h>
 i"ASIHTTPRequestDelegate.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m
-c000000004E6C177700000000000010CD
-t1315706743
-s4301
+c000000004E6DAF700000000000001907
+t1315811184
+s6407
 i"NewsFeedController.h"
 i"ASIHTTPRequest.h"
 i"JSONKit.h"
@@ -510,27 +531,27 @@ i"NewsFeedItem.h"
 i"NSNotificationCenter+LNExtension.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.h
-c000000004E6C1777000000000000036C
-t1315706743
-s876
+c000000004E6D9D540000000000000335
+t1315806548
+s821
 i<Foundation/Foundation.h>
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m
-c000000004E6C17770000000000000335
-t1315706743
-s821
+c000000004E6D9E770000000000000C0D
+t1315806839
+s3085
 i"NewsFeedItem.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.h
-c000000004E6C17770000000000000167
-t1315706743
-s359
+c000000004E6D98F800000000000001D4
+t1315805432
+s468
 i<UIKit/UIKit.h>
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m
-c000000004E6C1CEF0000000000002820
-t1315708143
-s10272
+c000000004E6DC8690000000000003C8B
+t1315817577
+s15499
 i"RootViewController.h"
 i"NewsFeedItem.h"
 i"NewsFeedController.h"
@@ -539,15 +560,15 @@ i"ArticleWebViewController.h"
 i"UIImage+LNExtensions.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.h
-c000000004E6C177700000000000008EA
-t1315706743
-s2282
+c000000004E6D7B6500000000000007B0
+t1315797861
+s1968
 i<Foundation/Foundation.h>
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m
-c000000004E6C17770000000000000D12
-t1315706743
-s3346
+c000000004E6D7B650000000000000A47
+t1315797861
+s2631
 i"UIImage+LNExtensions.h"
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UINavigationBar+Custom.h
@@ -638,37 +659,70 @@ i<netdb.h>
 i<CoreFoundation/CoreFoundation.h>
 i"Reachability.h"
 
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
+c000000004E6D61510000000000006260
+t1315791185
+s25184
+
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
 c000000004E6BFE75000000000000535A
 t1315700341
 s21338
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app
-t1315708143
-s306
+t1315817704
+s544
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app.dSYM
-t1315708143
+t1315817704
 s102
 
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/CrunchTitle.png
+t1315816024
+s11893
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Default-Portrait.png
+t1315815315
+s496380
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Default.png
+t1315815315
+s141688
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/FeedTableCell-iPad.nib
+t1315815678
+s8342
+
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/FeedTableCell.nib
-t1315707820
-s5063
+t1315814385
+s6870
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Icon-release@2x.png
+t1315816934
+s17556
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Icon.png
+t1315817528
+s23683
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Info.plist
-t1315190820
-s595
+t1315817704
+s707
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/MainWindow-iPad.nib
+t1315792890
+s2458
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/MainWindow.nib
 t1315190822
 s2457
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed
-t1315708143
-s568700
+t1315817704
+s586564
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/PkgInfo
-t1315190820
+t1315817704
 s8
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/RootViewController.nib
@@ -712,12 +766,16 @@ t1315190826
 s61500
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ArticleWebViewController.o
-t1315706744
-s52780
+t1315812552
+s53564
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCell.o
-t1315706744
-s44684
+t1315814057
+s56340
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCellForIpad.o
+t2
+s0
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/JSONKit.o
 t1315259754
@@ -732,33 +790,33 @@ t1315706744
 s8848
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeed.LinkFileList
-c000000004E6C0AA20000000000000AFA
-t1315703458
-s2810
+c000000004E6D4DBC0000000000000A6F
+t1315786172
+s2671
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedAppDelegate.o
-t1315706744
-s53084
+t1315805876
+s54284
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedController.o
-t1315706744
-s32204
+t1315811184
+s38596
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedItem.o
-t1315706744
-s17408
+t1315806839
+s23284
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/Reachability.o
 t1315190996
 s33772
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/RootViewController.o
-t1315708143
-s63256
+t1315817704
+s77132
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UIImage+LNExtensions.o
-t1315706744
-s13768
+t1315797862
+s13008
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UINavigationBar+Custom.o
 t1315682015
@@ -767,6 +825,31 @@ s37108
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/main.o
 t1315190826
 s6320
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/CrunchTitle.png
+c000000004E6DC1E70000000000002E75
+t1315815911
+s11893
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default-Portrait.png
+c000000004E6DBF0400000000000792FC
+t1315815172
+s496380
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default.png
+c000000004E6DBF710000000000022978
+t1315815281
+s141688
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon-release@2x.png
+c000000004E6DC5A40000000000004494
+t1315816868
+s17556
+
+N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon.png
+c000000004E6DC8340000000000005C83
+t1315817524
+s23683
 
 N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/customNavBar.png
 c000000004E670AF5000000000000331A
@@ -784,13 +867,13 @@ t1315190824
 s15814064
 
 NNewsFeed-Info.plist
-c000000004E6428AB000000000000038D
-t1315186859
-s909
+c000000004E6DC8E700000000000003F7
+t1315817703
+s1015
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies337400943#337400943#0(0"0(0#1#0"8767898368#0"0#
+lSLF07#2@18"Check dependencies337510503#337510504#0(0"0(0#1#0"8699570432#0"0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s336883624.465548
@@ -897,8 +980,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@83"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m336883626#336883626#0(0"0(0#0#75"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m8941083968#2015"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ASINetworkQueue.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ArticleWebViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337399544.062514
-e337399544.156647
+s337505352.631952
+e337505352.685781
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ArticleWebViewController.o
@@ -907,11 +990,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m337399544#337399544#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m8832897632#2026"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ArticleWebViewController.o0#
+lSLF07#2@85"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m337505352#337505352#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m8686315200#2026"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/ArticleWebViewController.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCell.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337399544.059774
-e337399544.156459
+s337506856.987188
+e337506857.048431
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCell.o
@@ -920,7 +1003,10 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@74"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m337399544#337399544#0(0"0(0#0#66"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m8840122688#2004"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCell.o0#
+lSLF07#2@74"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m337506856#337506857#0(0"0(0#0#66"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m8656967776#2004"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCell.o0#
+
+CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/FeedTableCellForIpad.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCellForIpad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/JSONKit.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s336952553.454366
@@ -962,8 +1048,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@93"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m337399544#337399544#0(0"0(0#0#85"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m8837156608#2042"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NSNotificationCenter+LNExtension.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedAppDelegate.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337399544.054099
-e337399544.155854
+s337498676.137292
+e337498676.267250
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedAppDelegate.o
@@ -972,11 +1058,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m337399544#337399544#0(0"0(0#0#72"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m8873901664#2016"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedAppDelegate.o0#
+lSLF07#2@80"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m337498676#337498676#0(0"0(0#0#72"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m8659746560#2016"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedAppDelegate.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337399544.057198
-e337399544.191124
+s337503984.325504
+e337503984.437819
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedController.o
@@ -985,11 +1071,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m337399544#337399544#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m8851216352#2014"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedController.o0#
+lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m337503984#337503984#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m8687747200#2014"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedController.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedItem.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337399544.058368
-e337399544.156263
+s337499639.713783
+e337499639.907055
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedItem.o
@@ -998,7 +1084,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m337399544#337399544#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m8847689792#2002"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedItem.o0#
+lSLF07#2@73"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m337499639#337499639#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m8697388448#2002"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeedItem.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/Reachability.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s336883790.387435
@@ -1014,8 +1100,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@78"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m336883790#336883796#0(0"0(0#0#70"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m8901758560#2007"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/Reachability.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/RootViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337400943.506050
-e337400943.748756
+s337510504.091523
+e337510504.222157
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/RootViewController.o
@@ -1024,11 +1110,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m337400943#337400943#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m8878224832#2014"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/RootViewController.o0#
+lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m337510504#337510504#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m8675617280#2014"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/RootViewController.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UIImage+LNExtensions.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s337399544.154413
-e337399544.203004
+s337490662.023171
+e337490662.068254
 r1
 xCompileC
 xbuild/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UIImage+LNExtensions.o
@@ -1037,7 +1123,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m337399544#337399544#0(0"0(0#0#73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m8815922592#2018"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UIImage+LNExtensions.o0#
+lSLF07#2@81"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m337490662#337490662#0(0"0(0#0#73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m8662577280#2018"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UIImage+LNExtensions.o0#
 
 CCompileC build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/UINavigationBar+Custom.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UINavigationBar+Custom.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s337374815.185840
@@ -1065,13 +1151,25 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@57"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m336883624#336883626#0(0"0(0#0#49"/Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m8969575168#1978"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/main.o0#
 
+CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
+s337508478.353314
+e337508478.779762
+r1
+xCompileXIB
+x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib:17: warning: The 'ImageViewRight' outlet of 'Feed Table Cell (GridFeedCell)' is connected to 'Right View' but 'ImageViewRight' is no longer defined on FeedTableCell.
+lSLF07#2@41"CompileXIB Classes/FeedTableCell-iPad.xib337508478#337508478#0(281"/* com.apple.ibtool.document.warnings *//Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib:17: warning: The 'ImageViewRight' outlet of 'Feed Table Cell (GridFeedCell)' is connected to 'Right View' but 'ImageViewRight' is no longer defined on FeedTableCell.1(22@152"The 'ImageViewRight' outlet of 'Feed Table Cell (GridFeedCell)' is connected to 'Right View' but 'ImageViewRight' is no longer defined on FeedTableCell.337508478#18446744073709551615#0#0(6@73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib337508434#17#0#17#0#0"0(0#0#73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib8674211168#607"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/FeedTableCell-iPad.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
 CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-s337400619.627914
-e337400620.302005
+s337507185.354946
+e337507185.793914
 r1
 xCompileXIB
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-lSLF07#2@36"CompileXIB Classes/FeedTableCell.xib337400619#337400620#0(0"0(0#0#68"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib8801726848#597"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/FeedTableCell.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+o/* com.apple.ibtool.document.warnings */
+o/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib:17: warning: The 'ImageViewRight' outlet of 'Feed Table Cell (GridFeedCell)' is connected to 'Right View' but 'ImageViewRight' is no longer defined on FeedTableCell.
+lSLF07#2@36"CompileXIB Classes/FeedTableCell.xib337507185#337507185#0(276"/* com.apple.ibtool.document.warnings *//Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib:17: warning: The 'ImageViewRight' outlet of 'Feed Table Cell (GridFeedCell)' is connected to 'Right View' but 'ImageViewRight' is no longer defined on FeedTableCell.1(22@152"The 'ImageViewRight' outlet of 'Feed Table Cell (GridFeedCell)' is connected to 'Right View' but 'ImageViewRight' is no longer defined on FeedTableCell.337507185#18446744073709551615#0#0(6@68"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib337507183#17#0#17#0#0"0(0#0#68"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib8662446464#597"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/FeedTableCell.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
 s336883620.835413
@@ -1081,6 +1179,14 @@ xCompileXIB
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
 lSLF07#2@25"CompileXIB MainWindow.xib336883620#336883623#0(0"0(0#0#57"/Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib8962453760#583"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/MainWindow.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
+CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
+s337485689.310918
+e337485690.062697
+r1
+xCompileXIB
+x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
+lSLF07#2@45"CompileXIB Resources-iPad/MainWindow-iPad.xib337485689#337485690#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib8639302368#608"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/MainWindow-iPad.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
 CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
 s337394821.270769
 e337394821.623746
@@ -1088,6 +1194,51 @@ r1
 xCompileXIB
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
 lSLF07#2@33"CompileXIB RootViewController.xib337394821#337394821#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib8842341056#599"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/RootViewController.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCpResource build/Debug-iphonesimulator/NewsFeed.app/CrunchTitle.png images/CrunchTitle.png
+s337508824.649177
+e337508824.653285
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsFeed.app/CrunchTitle.png
+ximages/CrunchTitle.png
+lSLF07#2@27"Copy images/CrunchTitle.png337508824#337508824#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/CrunchTitle.png8672051136#493"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/CrunchTitle.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
+
+CCpResource build/Debug-iphonesimulator/NewsFeed.app/Default-Portrait.png images/Default-Portrait.png
+s337508115.212979
+e337508115.295655
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsFeed.app/Default-Portrait.png
+ximages/Default-Portrait.png
+lSLF07#2@32"Copy images/Default-Portrait.png337508115#337508115#0(0"0(0#0#70"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default-Portrait.png8630728928#498"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default-Portrait.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
+
+CCpResource build/Debug-iphonesimulator/NewsFeed.app/Default.png images/Default.png
+s337508115.213602
+e337508115.295469
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsFeed.app/Default.png
+ximages/Default.png
+lSLF07#2@23"Copy images/Default.png337508115#337508115#0(0"0(0#0#61"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default.png8656615488#489"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
+
+CCpResource build/Debug-iphonesimulator/NewsFeed.app/Icon-release@2x.png images/Icon-release@2x.png
+s337509734.651554
+e337509734.655235
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsFeed.app/Icon-release@2x.png
+ximages/Icon-release@2x.png
+lSLF07#2@31"Copy images/Icon-release@2x.png337509734#337509734#0(0"0(0#0#69"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon-release@2x.png8699756512#497"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon-release@2x.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
+
+CCpResource build/Debug-iphonesimulator/NewsFeed.app/Icon.png images/Icon.png
+s337510328.398276
+e337510328.401794
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsFeed.app/Icon.png
+ximages/Icon.png
+lSLF07#2@20"Copy images/Icon.png337510328#337510328#0(0"0(0#0#58"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon.png8690533664#486"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
 
 CCpResource build/Debug-iphonesimulator/NewsFeed.app/customNavBar.png images/customNavBar.png
 s337069059.152003
@@ -1099,32 +1250,32 @@ ximages/customNavBar.png
 lSLF07#2@28"Copy images/customNavBar.png337069059#337069059#0(0"0(0#0#66"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/customNavBar.png18577855275401296#494"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/customNavBar.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
 
 CGenerateDSYMFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app.dSYM /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed
-s337400943.817487
-e337400943.855342
+s337510504.284980
+e337510504.320687
 r1
 xGenerateDSYMFile
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app.dSYM
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed
-lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/NewsFeed.app.dSYM build/Debug-iphonesimulator/NewsFeed.app/NewsFeed337400943#337400943#0(0"0(0#0#92"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed8890655552#398"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app.dSYM0#
+lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/NewsFeed.app.dSYM build/Debug-iphonesimulator/NewsFeed.app/NewsFeed337510504#337510504#0(0"0(0#0#92"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed8686315200#398"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app.dSYM0#
 
 CLd /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed normal i386
-s337400943.748829
-e337400943.817404
+s337510504.222434
+e337510504.284889
 r1
 xLd
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed
 xnormal
 xi386
-lSLF07#2@97"Link /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed337400943#337400943#0(0"0(0#0#0"8890134592#1017"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -filelist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeed.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -framework SystemConfiguration -framework MobileCoreServices -lz.1.2.3 -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed0#
+lSLF07#2@97"Link /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed337510504#337510504#0(0"0(0#0#0"8687388864#1017"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -filelist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/Objects-normal/i386/NewsFeed.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -framework SystemConfiguration -framework MobileCoreServices -lz.1.2.3 -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/NewsFeed0#
 
 CProcessInfoPlistFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Info.plist NewsFeed-Info.plist
-s336883620.757136
-e336883620.835334
+s337510504.087449
+e337510504.090630
 r1
 xProcessInfoPlistFile
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Info.plist
 xNewsFeed-Info.plist
-lSLF07#2@27"Process NewsFeed-Info.plist336883620#336883620#0(0"0(0#0#62"/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed-Info.plist29555366482477168#494"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility NewsFeed-Info.plist -genpkginfo /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Info.plist0#
+lSLF07#2@27"Process NewsFeed-Info.plist337510504#337510504#0(0"0(0#0#62"/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed-Info.plist8707641984#494"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility NewsFeed-Info.plist -genpkginfo /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app/Info.plist0#
 
 CProcessPCH /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch.gch NewsFeed_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s336883623.023320
@@ -1140,10 +1291,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@30"Precompile NewsFeed_Prefix.pch336883623#336883624#0(0"0(0#0#62"/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch8938696608#1865"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources/i386 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphonesimulator/NewsFeed.build/DerivedSources -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch -o /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-diupatsjmwfjtjcpaestegtvabwh/NewsFeed_Prefix.pch.gch0#
 
 CTouch /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app
-s337400943.855430
-e337400943.857343
+s337510504.320769
+e337510504.322704
 r1
 xTouch
 x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app
-lSLF07#2@89"Touch /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app337400943#337400943#0(0"0(0#0#0"8889564384#287"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
+lSLF07#2@89"Touch /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app337510504#337510504#0(0"0(0#0#0"8686036064#287"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphonesimulator/NewsFeed.app0#
 

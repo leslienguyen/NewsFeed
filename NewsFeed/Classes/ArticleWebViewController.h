@@ -14,5 +14,6 @@
 }
 
 - (void)loadRequest:(NSURLRequest *)request;
+- (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
 
 @end

@@ -10,6 +10,8 @@
 #import "ASIHTTPRequestDelegate.h"
 
 extern NSString *NewsFeedDidChangeNotification;
+extern NSString *NewsFeedRequestDidFailNotification;
+extern NSString *NewsFeedErrorKey;
 
 @interface NewsFeedController : NSObject <ASIHTTPRequestDelegate>
 {
@@ -20,5 +22,6 @@ extern NSString *NewsFeedDidChangeNotification;
 
 +(NewsFeedController*)sharedController;
 - (void)makeRequest;
+- (void)saveCache;
 
 @end

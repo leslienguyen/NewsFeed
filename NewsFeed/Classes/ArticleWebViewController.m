@@ -31,7 +31,7 @@
 		
 		self.loadingIndicator = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];
 		CGSize indicatorSize = CGSizeMake(50.0f, 50.0f);
-		self.loadingIndicator.bounds = CGRectMake(0.0f, 0.0f, indicatorSize.width, indicatorSize.height);
+		self.loadingIndicator.frame = CGRectMake(0.0f, 0.0f, indicatorSize.width, indicatorSize.height);
 	}
 	
 	return self;
@@ -76,6 +76,11 @@
 - (void)loadRequest:(NSURLRequest *)request
 {
 	[self.webView loadRequest:request];
+}
+
+- (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL
+{
+	[self.webView loadHTMLString:string baseURL:baseURL];
 }
 
 #pragma mark UIWebViewDelegate methods

@@ -79,21 +79,9 @@
 	return newImage;
 }
 
-- (UIImage *)imageByScalingPortraitWithAspectFillForSize:(CGSize)size
+- (UIImage *)imageByScalingWithAspectFillForSize:(CGSize)size
 {
-	// NOTE: The corresponding NSImage+CSIExtensions code modifies the centered vertical offset by 1.66.
-	// Thus, it is 0.50 * 1.66 = 0.83.
-	// Since that drawing code is vertically flipped, this corresponds to 1.0 - 0.83 = 0.17 for our vertical offset factor.
-	return [self imageByScalingWithAspectFillForSize:size horizontalOffsetFactor:0.50f verticalOffsetFactor:0.17f];
+	return [self imageByScalingWithAspectFillForSize:size horizontalOffsetFactor:0.00f verticalOffsetFactor:0.00f];
 }
-
-- (UIImage *)imageByScalingLandscapeWithAspectFillForSize:(CGSize)size
-{
-	// NOTE: The corresponding NSImage+CSIExtensions code modifies the centered vertical offset by 1.66.
-	// Thus, it is 0.50 * 1.66 = 0.83.
-	// Since that drawing code is vertically flipped, this corresponds to 1.0 - 0.83 = 0.17 for our vertical offset factor.
-	return [self imageByScalingWithAspectFillForSize:size horizontalOffsetFactor:0.17f verticalOffsetFactor:0.5f];
-}
-
 
 @end

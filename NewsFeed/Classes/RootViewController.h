@@ -12,9 +12,13 @@
 
 @interface RootViewController : UITableViewController
 {
-	BOOL gridFormat;
-	FeedTableCell *tvCell;
+	BOOL myTableFormat;
+	FeedTableCell *myTvCell;
+	NSMutableDictionary *myCachedImages;
+	NSString *myErrorMessage;
 }
+
+- (IBAction)displayDetail:(id)sender;
 
 @property (nonatomic, assign) IBOutlet FeedTableCell *tvCell;
 @end

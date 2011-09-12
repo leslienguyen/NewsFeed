@@ -15,10 +15,15 @@
 static NewsFeedController *theSharedController = nil;
 
 NSString *NewsFeedDidChangeNotification = @"NewsFeedDidChangeNotification";
+NSString *NewsFeedRequestDidFailNotification = @"NewsFeedRequestDidFailNotification";
+NSString *NewsFeedErrorKey = @"NewsFeedErrorKey";
+NSString *NewsFeedPathString = @"NewsFeedEntries";
 
 @interface NewsFeedController()
 
 @property (nonatomic, readwrite, retain) NSMutableArray *entries;
+
+- (void)loadCache;
 
 @end
 
@@ -32,15 +37,15 @@ NSString *NewsFeedDidChangeNotification = @"NewsFeedDidChangeNotification";
 	
 	if(self != nil)
 	{
-		self.entries = [NSMutableArray array];
+		[self loadCache];
 	}
 	return self;
 }
 
 - (void)makeRequest
 {
-	NSLog(@"Make Request");
-	NSURL *url = [NSURL URLWithString:@"https://ajax.googleapis.com/ajax/services/feed/load?q=http://feeds.feedburner.com/TechCrunch&v=1.0&output=json&num=12"];
+	NSLog(@"[NewsFeedController makeRequest:]");
+	NSURL *url = [NSURL URLWithString:@"https://ajax.googleapis.com/ajax/services/feed/load?q=http://feeds.feedburner.com/TechCrunch&v=1.0&output=json&num=18"];
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
 	[request setDelegate:self];
 	[request startAsynchronous];	
@@ -50,7 +55,7 @@ NSString *NewsFeedDidChangeNotification = @"NewsFeedDidChangeNotification";
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-	NSLog(@"requestFinished:");
+	NSLog(@"[NewsFeedController requestFailed:]");
 	
 	//remove all old entries
 	[self.entries removeAllObjects];
@@ -88,23 +93,45 @@ NSString *NewsFeedDidChangeNotification = @"NewsFeedDidChangeNotification";
 		
 		for(NSDictionary *content in contents)
 		{
-			//NSString *medium = [content objectForKey:@"medium"];
-			//do i need to check if it's an image??
-			NSArray *thumbnails = [content objectForKey:@"thumbnails"];
-			NSDictionary *thumbnailDict = [thumbnails lastObject];
-			NSString *urlString = [thumbnailDict objectForKey:@"url"];
-			if([urlString length] > 0)
+			NSString *medium = [content objectForKey:@"medium"];
+			
+			if([medium isEqualToString:@"image"])
 			{
-				NSURL *url = [NSURL URLWithString:urlString];
-				UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]]; 
+				NSString *urlString = nil;
+				NSURL *url = nil;
+				UIImage *image = nil;
+			
+//				//get the image
+//				urlString = [content objectForKey:@"url"];
+//				if([urlString length] > 0)
+//				{
+//					url = [NSURL URLWithString:urlString];
+//					image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]]; 
+//					
+//					if(image)
+//					{
+//						[item setImage:image];
+//						break;//currently don't need to fetch all thumbnails
+//					}
+//				}
+								
+				//get thumbnail
 				
-				if(image != nil)
+				NSArray *thumbnails = [content objectForKey:@"thumbnails"];
+				NSDictionary *thumbnailDict = [thumbnails lastObject];
+				
+				urlString = [thumbnailDict objectForKey:@"url"];
+				if([urlString length] > 0)
 				{
-					[item setThumbnail:image];
+					url = [NSURL URLWithString:urlString];
+					image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]]; 
+					
+					if(image)
+					{
+						[item setThumbnail:image];
+						break; 	//currently don't need to fetch all thumbnails
+					}
 				}
-				
-				break; //currently only need one thumbnail
-				
 			}
 		}
 		
@@ -114,16 +141,57 @@ NSString *NewsFeedDidChangeNotification = @"NewsFeedDidChangeNotification";
 		
 	}
 	
-	// Use when fetching binary data
-	//NSData *responseData = [request responseData];
-	
 	[[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NewsFeedDidChangeNotification object:self];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
 	NSError *error = [request error];
-	NSLog(@"requestFailed: %@", [error localizedDescription]);
+	NSLog(@"[NewsFeedController requestFailed:] error - %@", [error localizedDescription]);
+	
+	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[error localizedDescription] forKey:NewsFeedErrorKey];
+	[[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NewsFeedRequestDidFailNotification object:self userInfo:userInfo];
+}
+
+- (void)loadCache
+{	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+	NSString *documentsDirectory = [paths objectAtIndex:0]; 
+	NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:NewsFeedPathString];
+	self.entries = [NSKeyedUnarchiver unarchiveObjectWithFile:dataPath];
+	
+	if(self.entries == nil)
+	{
+		self.entries = [[[NSMutableArray alloc] init] autorelease];
+	}	
+	else 
+	{
+		[[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NewsFeedDidChangeNotification object:self];
+	}
+
+}
+
+- (void)saveCache
+{
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+    NSString *documentsDirectory = [paths objectAtIndex:0]; 
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:NewsFeedPathString];
+	
+    if([NSKeyedArchiver archiveRootObject:self.entries toFile:dataPath] == NO)
+	{
+        NSLog(@"[NewsFeedController saveCache:] Failed to save.");
+	}
+	else
+	{
+		NSLog(@"[NewsFeedController saveCache:] Saved with filepath %@", dataPath);
+	}
+}
+
+- (void)dealloc
+{
+	[myEntries release]; myEntries = nil;
+	
+	[super dealloc];
 }
 
 

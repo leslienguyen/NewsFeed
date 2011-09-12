@@ -13,29 +13,45 @@
 #import "ArticleWebViewController.h"
 #import "UIImage+LNExtensions.h"
 
-#define kArticleImageWidth 154.0f
-#define kArticleImageHeight 134.0f
+#define kArticleGridImageWidth 154.0f
+#define kArticleGridImageHeight 134.0f
+#define kArticleRowHeight 44.0f
+#define kArticleGridHeight  138.0f
+
+#define kArticleGridImageWidthIPad 248.0f
+#define kArticleGridImageHeightIPad 234.0f
+#define kArticleRowHeightIPad 88.0f
+#define kArticleGridHeightIPad 240.0f
+
+#define kNewsFeedLayoutGrid 0
+#define kNewsFeedLayoutTable 1
+
+#define kNewsFeedNumberOfArticlePerRow 2
+#define kNewsFeedNumberOfArticlePerRowIPad 3
+
+NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 
 @interface RootViewController() 
 
 - (void)newsFeedDidChange:(NSNotification*)note;
+- (void)newsFeedRequestDidFail:(NSNotification*)note;
 - (void)refreshFeed:(id)sender;
 - (void)displayDetailForIndex:(NSUInteger)index;
-- (NSUInteger)indexLeftForRow:(NSUInteger)row;
-- (NSUInteger)indexRightForRow:(NSUInteger)row;
-- (void)displayDetailRight:(id)sender;
-- (void)displayDetailLeft:(id)sender;
+- (UIImage*)imageForFeed:(NewsFeedItem*)entry;
+- (void)changeFormat:(id)sender;
 
-
-
-@property(nonatomic, readwrite, getter=isGridFormat, assign) BOOL gridFormat;
+@property(nonatomic, readwrite, getter=isTableFormat, assign) BOOL tableFormat;
+@property(nonatomic, readwrite, retain) NSMutableDictionary *cachedImages;
+@property(nonatomic, readwrite, retain) NSString *errorString;
 
 @end
 
 
 @implementation RootViewController
-@synthesize tvCell;
-@synthesize gridFormat;
+@synthesize tvCell = myTvCell;
+@synthesize tableFormat = myTableFormat;
+@synthesize cachedImages = myCachedImages;
+@synthesize errorString = myErrorString;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -45,19 +61,47 @@
 {
     [super viewDidLoad];
 	
-	[self setTitle:@"TechCrunch"];
+	[self setTitle:@"LesCrunch"];
 	
-	UIColor *aColor = [UIColor colorWithRed:0.1 green:0.560 blue:0.556 alpha:1.000];
+	//Customizing the nav bar
+	UIColor *aColor = [UIColor colorWithRed:44.0f/255.0f green:167.0f/255.0f blue:48.0f/255.0f alpha:1.000];
 	UINavigationBar *bar = [[self navigationController] navigationBar];
 	[bar setTintColor:aColor];
 		
-	UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshFeed:)];
-	[[self navigationItem] setRightBarButtonItem:button];
+	// Right bar button
+	UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+																			target:self 
+																			action:@selector(refreshFeed:)];
+	self.navigationItem.rightBarButtonItem = button;
 	[button release];
 	
+	// Left bar button
+
+	UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Grid", @"Table", nil]];
+	[segControl setTintColor:aColor];
+	[segControl setSegmentedControlStyle:UISegmentedControlStyleBar];	
+	[segControl addTarget:self action:@selector(changeFormat:) forControlEvents:UIControlEventValueChanged];
+	
+	//If the key does not exist, this method returns 0, which defaults us to grid layout
+	NSUInteger layoutIndex = [[NSUserDefaults standardUserDefaults] integerForKey:NewsFeedLayoutKey];
+							
+	[segControl setSelectedSegmentIndex:layoutIndex];
+	
+	UIBarButtonItem *segBarItem = [[UIBarButtonItem alloc] initWithCustomView:segControl];
+	self.navigationItem.leftBarButtonItem = segBarItem;
+	
+	[segControl release];
+	[segBarItem release];	
+	
+	[self setTableFormat:layoutIndex];
+	self.cachedImages = [NSMutableDictionary dictionaryWithCapacity:10];
+	
+	// make the first request
 	[[NewsFeedController sharedController] makeRequest];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsFeedDidChange:) name:NewsFeedDidChangeNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsFeedRequestDidFail:) name:NewsFeedRequestDidFailNotification object:nil];
+
 }
 
 /*
@@ -89,23 +133,33 @@
 }
  */
 
-- (void)setGridFormat:(BOOL)enabled
+- (void)setTableFormat:(BOOL)enabled
 {
 	if(enabled)
 	{
-		self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+		self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 	}
 	else 
 	{
-		self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+		self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	}	
 	
-	gridFormat = enabled;
+	myTableFormat = enabled;
+	
+	[self.tableView reloadData];
 }
 
 - (void)newsFeedDidChange:(NSNotification*)note
 {
-	[self setGridFormat:YES];
+	self.errorString = nil;
+	[self.cachedImages removeAllObjects];
+	[self.tableView reloadData];
+}
+
+- (void)newsFeedRequestDidFail:(NSNotification*)note
+{
+	self.errorString = [[note userInfo] objectForKey:NewsFeedErrorKey];
+	[self.cachedImages removeAllObjects];
 	[self.tableView reloadData];
 }
 
@@ -115,69 +169,22 @@
 	[[NewsFeedController sharedController] makeRequest];
 }
 
-- (void)displayDetailLeft:(id)sender
+- (IBAction)displayDetail:(id)sender;
 {
 	UIButton *button = (UIButton *)sender;
-	UITableViewCell *cell = (UITableViewCell*)[button superview];
-	int row = [self.tableView indexPathForCell:cell].row;
-	
-	NSUInteger index = [self indexLeftForRow:row];
-	
-	if(index != NSNotFound)
-	{
-		[self displayDetailForIndex:index];
-	}
+	NSUInteger index = button.tag;
+		
+	[self displayDetailForIndex:index];	
 }
 
-- (void)displayDetailRight:(id)sender
+- (void)changeFormat:(id)sender
 {
-	UIButton *button = (UIButton *)sender;
-	UITableViewCell* cell = (UITableViewCell*)[button superview];
-	int row = [self.tableView indexPathForCell:cell].row;
+	UISegmentedControl *control = (UISegmentedControl*)sender;
+	NSUInteger index = [control selectedSegmentIndex];
 	
-	NSUInteger index = [self indexRightForRow:row];
-	
-	if(index != NSNotFound)
-	{
-		[self displayDetailForIndex:index];
-	}
+	[self setTableFormat:index];
+
 }
-
-
-// each row will have two entries
-// row 0: entry #0, 1
-// row 1: entry #2, 3
-// To get index of entry left: row * 2
-// To get index of entry right: row*2 + 1; need to check if there is an entry
-- (NSUInteger)indexLeftForRow:(NSUInteger)row
-{
-	NSUInteger indexLeft = row * 2;
-	
-	NSInteger count = [[[NewsFeedController sharedController] entries] count];
-
-	if(indexLeft < count)
-	{
-		return indexLeft;
-	}
-	
-	return NSNotFound;
-}
-
-- (NSUInteger)indexRightForRow:(NSUInteger)row
-{	
-	NSUInteger indexRight = row * 2 + 1;
-	
-	NSInteger count = [[[NewsFeedController sharedController] entries] count];
-
-	if(indexRight < count)
-	{
-		return indexRight;
-	}
-	
-	return NSNotFound;
-}
-
-
 
 #pragma mark -
 #pragma mark Table view data source
@@ -191,13 +198,28 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
+	if(self.errorString)
+	{
+		return 1;
+	}
+	
 	NSInteger count = [[[NewsFeedController sharedController] entries] count];
 
-	if(self.gridFormat)
+	if(!self.tableFormat)
 	{
-		float f = count/2;
-		NSInteger numberOfEntries = f + 0.5;
-		return numberOfEntries;
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+		{
+			float f = count/kNewsFeedNumberOfArticlePerRowIPad;
+			NSInteger numberOfEntries = f + 0.5;
+			return numberOfEntries;
+		}
+		else 
+		{
+			float f = count/kNewsFeedNumberOfArticlePerRow;
+			NSInteger numberOfEntries = f + 0.5;
+			return numberOfEntries;
+		}
+
 	}
 	
 	return count;
@@ -207,70 +229,34 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
        
-	if(self.gridFormat)
+	if(self.errorString)
 	{
-		static NSString *GridCellIdentifier = @"GridFeedCell";
-
-		FeedTableCell *cell = (FeedTableCell*)[tableView dequeueReusableCellWithIdentifier:GridCellIdentifier];
+		static NSString *NormalCellIdentifier = @"ErrorFeedCell";
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NormalCellIdentifier];
+		
 		if (cell == nil) {
 			
-			[[NSBundle mainBundle] loadNibNamed:@"FeedTableCell" owner:self options:nil];
-			
-			cell = tvCell;
-			
-			self.tvCell = nil;		
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NormalCellIdentifier];
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		}
 		
-		// Configure the cell.
+		[cell.textLabel setText:self.errorString];
 		
-		NSUInteger indexLeft = [self indexLeftForRow:indexPath.row];
-		NSUInteger indexRight = [self indexRightForRow:indexPath.row];
-
-		
-		NSArray *entries = [[NewsFeedController sharedController] entries];
-		
-		if(indexLeft < [entries count] )
-		{
-			NewsFeedItem *entry = [entries objectAtIndex:indexLeft];
-			
-			UILabel *label = (UILabel *)[cell viewWithTag:1];
-			label.text = [entry title];
-
-			UIButton *button = (UIButton*)[cell viewWithTag:2];
-			UIImage *image = [[entry thumbnail] imageByScalingPortraitWithAspectFillForSize: CGSizeMake(kArticleImageWidth, kArticleImageHeight)];
-			[button setImage:image forState:UIControlStateNormal];
-			[button addTarget:self action:@selector(displayDetailLeft:) forControlEvents:UIControlEventTouchUpInside];
-		}
-		
-		if(indexRight < [entries count])
-		{
-			NewsFeedItem *entry = [entries objectAtIndex:indexRight];
-			
-			UILabel *label = (UILabel *)[cell viewWithTag:3];
-			label.text = [entry title];
-			
-			UIButton *button = (UIButton*)[cell viewWithTag:4];
-			UIImage *image = [[entry thumbnail] imageByScalingPortraitWithAspectFillForSize: CGSizeMake(kArticleImageWidth, kArticleImageHeight)];
-			[button setImage:image forState:UIControlStateNormal];				
-			[button addTarget:self action:@selector(displayDetailRight:) forControlEvents:UIControlEventTouchUpInside];
-
-		}	
 		return cell;
-
 	}
-	else 
-	{
-	
+		
+	if(self.tableFormat)
+	{		
 		static NSString *NormalCellIdentifier = @"NormalFeedCell";
-
+		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NormalCellIdentifier];
 		
 		if (cell == nil) {
 			
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NormalCellIdentifier];
 			
-			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-			
+			[cell setSelectionStyle:UITableViewCellSelectionStyleBlue];			
 		}
 		
 		NSArray *entries = [[NewsFeedController sharedController] entries];
@@ -282,13 +268,186 @@
 			cell.textLabel.text = [entry title];
 			
 			cell.detailTextLabel.text = [entry summary];
-								
-			cell.imageView.image = [entry thumbnail];
+			
+			
+			
+			cell.imageView.image = [self imageForFeed:entry];
 		}
 		
 		return cell;
 	}
+	
+	else
+	{
+		static NSString *GridCellIdentifier = @"GridFeedCell";
 
+		FeedTableCell *cell = (FeedTableCell*)[tableView dequeueReusableCellWithIdentifier:GridCellIdentifier];
+		if (cell == nil) 
+		{
+			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+			{
+				[[NSBundle mainBundle] loadNibNamed:@"FeedTableCell-iPad" owner:self options:nil];
+			}
+			else 
+			{
+				[[NSBundle mainBundle] loadNibNamed:@"FeedTableCell" owner:self options:nil];
+
+			}
+			
+			cell = self.tvCell;
+			
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+			
+			self.tvCell = nil;		
+		}
+		
+		// Configure the cell.
+		
+		// For iPad: 3 articles per row
+		// For iPhone: 2 articles per row
+		
+		NSUInteger indexLeft;
+		NSUInteger indexMiddle;
+		NSUInteger indexRight;
+		
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+		{			
+			indexLeft = indexPath.row * kNewsFeedNumberOfArticlePerRowIPad;
+			indexMiddle = indexLeft + 1;
+			indexRight = indexLeft + 2;
+		}
+		else 
+		{
+			indexLeft = indexPath.row * kNewsFeedNumberOfArticlePerRow;
+			indexRight = indexLeft + 1;
+		}
+		
+		NSArray *entries = [[NewsFeedController sharedController] entries];
+		
+		if(indexLeft < [entries count] )
+		{
+			NewsFeedItem *entry = [entries objectAtIndex:indexLeft];
+
+			UIButton *button = [cell buttonLeft];
+			button.tag = indexLeft;						
+
+			UIImage *sizedImage = [self imageForFeed:entry];
+			
+			// if there is an image display it
+			if(sizedImage)
+			{
+				[button setImage:sizedImage forState:UIControlStateNormal];
+				
+				[cell.titleLeft setText:[entry title]];				
+				[cell.bigTitleLeft setHidden:YES];
+				[cell.bigTitleViewLeft setHidden:YES];
+			}
+			else 
+			{
+				[button setImage:nil forState:UIControlStateNormal];
+				[cell.bigTitleLeft setHidden:NO];
+				[cell.bigTitleViewLeft setHidden:NO];
+				[cell.bigTitleLeft setText:[entry title]];
+				[cell.titleLeft setText:[entry author]];
+			}
+		}
+		
+		// the middle articale is only for iPad
+		
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+		{			
+			if(indexMiddle < [entries count])
+			{
+				NewsFeedItem *entry = [entries objectAtIndex:indexMiddle];
+				
+				UIButton *button = [cell buttonMiddle];
+				button.tag = indexMiddle;						
+				
+				UIImage *sizedImage = [self imageForFeed:entry];
+				
+				// if there is an image display it
+				if(sizedImage)
+				{		
+					[button setImage:sizedImage forState:UIControlStateNormal];
+					
+					[cell.titleMiddle setText:[entry title]];				
+					[cell.bigTitleMiddle setHidden:YES];
+					[cell.bigTitleViewMiddle setHidden:YES];
+					
+				}
+				else 
+				{
+					[button setImage:nil forState:UIControlStateNormal];
+					[cell.bigTitleMiddle setHidden:NO];
+					[cell.bigTitleViewMiddle setHidden:NO];
+					[cell.bigTitleMiddle setText:[entry title]];
+					[cell.titleMiddle setText:[entry author]];
+				}
+			}
+		}
+		
+		if(indexRight < [entries count])
+		{
+			NewsFeedItem *entry = [entries objectAtIndex:indexRight];
+			
+			UIButton *button = [cell buttonRight];
+			button.tag = indexRight;						
+
+			UIImage *sizedImage = [self imageForFeed:entry];
+			
+			// if there is an image display it
+			if(sizedImage)
+			{		
+				[button setImage:sizedImage forState:UIControlStateNormal];
+				
+				[cell.titleRight setText:[entry title]];				
+				[cell.bigTitleRight setHidden:YES];
+				[cell.bigTitleViewRight setHidden:YES];
+
+			}
+			else 
+			{
+				[button setImage:nil forState:UIControlStateNormal];
+				[cell.bigTitleRight setHidden:NO];
+				[cell.bigTitleViewRight setHidden:NO];
+				[cell.bigTitleRight setText:[entry title]];
+				[cell.titleRight setText:[entry author]];
+			}
+		}	
+		
+		return cell;
+	}
+
+}
+
+- (UIImage*)imageForFeed:(NewsFeedItem*)entry
+{
+	//look for image in cache first
+	UIImage *sizedImage = [self.cachedImages objectForKey:[entry link]];
+	CGSize size;
+	
+	// if image doesnt exist in cache, find it and size it 
+	if(sizedImage == nil)
+	{
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+		{
+			size = (self.tableFormat) ? CGSizeMake(kArticleRowHeightIPad, kArticleRowHeightIPad): CGSizeMake(kArticleGridImageWidthIPad, kArticleGridImageHeightIPad);			
+			sizedImage = [[entry thumbnail] imageByScalingWithAspectFillForSize:size];
+		}
+		else 
+		{
+			size = (self.tableFormat) ?  CGSizeMake(kArticleRowHeight, kArticleRowHeight): CGSizeMake(kArticleGridImageWidth, kArticleGridImageHeight);
+			sizedImage = [[entry thumbnail] imageByScalingWithAspectFillForSize:size];
+		}		
+		
+		if(sizedImage != nil)
+		{
+			// save image to cache
+			[self.cachedImages setObject:sizedImage forKey:[entry link]];
+		}
+	}
+	
+	return sizedImage;	
 }
 
 
@@ -337,32 +496,51 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if(self.gridFormat)
-	{
-		return 138.0f;
-	}
+	CGFloat height;
 	
-	return 44.0f;
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+	{
+		if(self.tableFormat)
+		{
+			height = kArticleRowHeightIPad;
+		}
+		else 
+		{
+			height = kArticleGridHeightIPad;
+		}
+	}
+	else 
+	{
+		if(self.tableFormat)
+		{
+
+			height = kArticleRowHeight;
+		}
+		else 
+		{
+			height = kArticleGridHeight;
+		}
+	}
+
+	return height;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if(self.gridFormat)
+	if(self.tableFormat)
 	{
-		return nil;
+		return indexPath;
 	}
 	
-	return indexPath;
+	return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	if(!self.gridFormat)
+	if(self.tableFormat)
 	{
 		[self displayDetailForIndex:indexPath.row];
 	}
-	
-	
 }
 	
 	
@@ -376,16 +554,16 @@
 	
 	if(index < [entries count])
 	{
-		NSURL *url = [[entries objectAtIndex:index] link];
+		NewsFeedItem *entry = [entries objectAtIndex:index];
+		NSURL *url = [entry link];
 		
-		//URL Requst Object
+		//URL Request Object
 		NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 		
 		//Load the request in the UIWebView.
 		[detailViewController loadRequest:requestObj];
-		
-		[self.navigationController pushViewController:detailViewController animated:YES];	 
-		
+				
+		[self.navigationController pushViewController:detailViewController animated:YES];	 		
 	}
 }
 		
@@ -407,7 +585,13 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc 
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	[myCachedImages release]; myCachedImages = nil;
+	[myErrorString release]; myErrorString = nil;
+	
     [super dealloc];
 }
 

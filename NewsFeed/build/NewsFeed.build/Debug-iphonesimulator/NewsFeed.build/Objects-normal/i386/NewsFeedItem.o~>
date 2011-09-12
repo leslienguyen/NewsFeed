@@ -1,9 +1,0 @@
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:17: error: no declaration of property 'publishedDate' found in the interface
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:20: error: no declaration of property 'thumbnail' found in the interface
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m: In function '-[NewsFeedItem dealloc]':
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:30: error: 'myThumbnail' undeclared (first use in this function)
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:30: error: (Each undeclared identifier is reported only once
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:30: error: for each function it appears in.)
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m: At top level:
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:35: warning: property 'publishedData' requires method '-publishedData' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m:35: warning: property 'publishedData' requires the method 'setPublishedData:' to be defined - use @synthesize, @dynamic or provide a method implementation

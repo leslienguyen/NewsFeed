@@ -8,23 +8,43 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface FeedTableCell : UITableViewCell 
 {
 	UILabel *myTitleLeft;
-	UILabel *myTitleRight;
-	UIImageView *myImageViewLeft;
-	UIImageView *myImageViewRight;
 	UIButton *myButtonLeft;
-	UIButton *myButtonRight;
+	UILabel *myBigTitleLeft;
+	UIView *myBigTitleViewLeft;
+	UIImageView *myImageViewLeft;
 	
+	UILabel *myTitleMiddle;
+	UIButton *myButtonMiddle;
+	UILabel *myBigTitleMiddle;	
+	UIView *myBigTitleViewMiddle;
+	UIImageView *myImageViewMiddle;
+	
+	UILabel *myTitleRight;
+	UIButton *myButtonRight;
+	UILabel *myBigTitleRight;	
+	UIView *myBigTitleViewRight;
+	UIImageView *myImageViewRight;
 }
 
 @property (nonatomic, readwrite, retain) IBOutlet UILabel *titleLeft;
-@property (nonatomic, readwrite, retain) IBOutlet UILabel *titleRight;
-@property (nonatomic, readwrite, retain) IBOutlet UIImageView *imageViewLeft;
-@property (nonatomic, readwrite, retain) IBOutlet UIImageView *imageViewRight;
 @property (nonatomic, readwrite, retain) IBOutlet UIButton *buttonLeft;
+@property (nonatomic, readwrite, retain) IBOutlet UILabel *bigTitleLeft;
+@property (nonatomic, readwrite, retain) IBOutlet UIView *bigTitleViewLeft;
+@property (nonatomic, readwrite, retain) IBOutlet UIImageView *imageViewLeft;
+
+@property (nonatomic, readwrite, retain) IBOutlet UILabel *titleMiddle;
+@property (nonatomic, readwrite, retain) IBOutlet UIButton *buttonMiddle;
+@property (nonatomic, readwrite, retain) IBOutlet UILabel *bigTitleMiddle;
+@property (nonatomic, readwrite, retain) IBOutlet UIView *bigTitleViewMiddle;
+@property (nonatomic, readwrite, retain) IBOutlet UIImageView *imageViewMiddle;
+
+@property (nonatomic, readwrite, retain) IBOutlet UILabel *titleRight;
 @property (nonatomic, readwrite, retain) IBOutlet UIButton *buttonRight;
+@property (nonatomic, readwrite, retain) IBOutlet UILabel *bigTitleRight;
+@property (nonatomic, readwrite, retain) IBOutlet UIView *bigTitleViewRight;
+@property (nonatomic, readwrite, retain) IBOutlet UIImageView *imageViewRight;
 
 @end

@@ -18,11 +18,7 @@
  */
 - (CGSize)sizeByScalingWithAspectFitForSize:(CGSize)size;
 
-/*!
- Returns the size of the image if it were to be scaled to fill the specified size.
- \param size The size to use for computing the size.
- \return The width and height of the resulting image's bounding box.
- */
+// Returns the size of the image if it were to be scaled to fill the specified size.
 - (CGSize)sizeByScalingWithAspectFillForSize:(CGSize)size;
 
 /*!
@@ -35,22 +31,19 @@
 
 /*!
  Creates and returns a new image object with content scaled to fill the specified size.
- \param size The size to use for the new image's bounding box.
- \param horizontalOffsetFactor A value ranging from 0.0 to 1.0 that specifies how far the scaled image should be horizontally offset in the new bounding box.
- \param verticalOffsetFactor A value ranging from 0.0 to 1.0 that specifies how far the scaled image should be vertically offset in the new bounding box.
+ \param size - The size to use for the new image's bounding box.
+ \param horizontalOffsetFactor - A value ranging from 0.0 to 1.0 that specifies how far the scaled image should be horizontally offset in the new bounding box.
+ \param verticalOffsetFactor - A value ranging from 0.0 to 1.0 that specifies how far the scaled image should be vertically offset in the new bounding box.
  \return A new image object.
  */
 - (UIImage *)imageByScalingWithAspectFillForSize:(CGSize)size horizontalOffsetFactor:(CGFloat)horizontalOffsetFactor verticalOffsetFactor:(CGFloat)verticalOffsetFactor;
 
 /*!
  Creates and returns a new image object with content scaled to fill the specified size.
- Uses horizontal and vertical offset factors that are tuned for a portrait.
- Specifically, the vertical offset will favor the head area over the shoulders area.
+ Uses 0.0f horizontal and vertical offset factors
  \param size The size to use for the new image's bounding box.
  \return A new image object.
  */
-- (UIImage *)imageByScalingPortraitWithAspectFillForSize:(CGSize)size;
-
-- (UIImage *)imageByScalingLandscapeWithAspectFillForSize:(CGSize)size;
+- (UIImage *)imageByScalingWithAspectFillForSize:(CGSize)size;
 
 @end
