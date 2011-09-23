@@ -23,6 +23,7 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 
 @property (nonatomic, readwrite, retain) NSMutableArray *entries;
 
+- (void)_makeRequest;
 - (void)loadCache;
 
 @end
@@ -44,11 +45,23 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 
 - (void)makeRequest
 {
+	//performing network request in background to not block the UI
+	[self performSelectorInBackground:@selector(_makeRequest) withObject:nil];
+}
+
+
+- (void)_makeRequest
+{
+	//create my own autorelease pool because this is in a background thread
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
 	NSLog(@"[NewsFeedController makeRequest:]");
 	NSURL *url = [NSURL URLWithString:@"https://ajax.googleapis.com/ajax/services/feed/load?q=http://feeds.feedburner.com/TechCrunch&v=1.0&output=json&num=18"];
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
 	[request setDelegate:self];
 	[request startAsynchronous];	
+	
+	[pool release];
 }
 
 #pragma mark ASIHTTPRequest Delegate Methods

@@ -179,6 +179,8 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 
 - (void)changeFormat:(id)sender
 {
+	[self.cachedImages removeAllObjects];
+
 	UISegmentedControl *control = (UISegmentedControl*)sender;
 	NSUInteger index = [control selectedSegmentIndex];
 	
