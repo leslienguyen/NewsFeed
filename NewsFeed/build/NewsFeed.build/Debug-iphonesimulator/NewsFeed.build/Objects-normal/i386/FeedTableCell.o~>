@@ -1,9 +1,0 @@
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:18: error: no declaration of property 'imageViewLeft' found in the interface
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:24: error: no declaration of property 'imageViewMiddle' found in the interface
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:30: error: no declaration of property 'imageViewRight' found in the interface
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:55: warning: property 'bigImageViewLeft' requires method '-bigImageViewLeft' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:55: warning: property 'bigImageViewLeft' requires the method 'setBigImageViewLeft:' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:55: warning: property 'bigImageViewMiddle' requires method '-bigImageViewMiddle' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:55: warning: property 'bigImageViewMiddle' requires the method 'setBigImageViewMiddle:' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:55: warning: property 'bigImageViewRight' requires method '-bigImageViewRight' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m:55: warning: property 'bigImageViewRight' requires the method 'setBigImageViewRight:' to be defined - use @synthesize, @dynamic or provide a method implementation

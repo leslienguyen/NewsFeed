@@ -1,1660 +1,0 @@
-TNewsFeed
-v7
-r0
-t338502864.457085
-cCheck dependencies
-cCpResource build/Debug-iphoneos/NewsFeed.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
-cProcessInfoPlistFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Info.plist NewsFeed-Info.plist
-cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
-cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
-cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
-cCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
-cCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default-Portrait.png images/Default-Portrait.png
-cCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default.png images/Default.png
-cCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/CrunchTitle.png images/CrunchTitle.png
-cCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Icon.png images/Icon.png
-cProcessPCH /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch.gch NewsFeed_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-cProcessPCH /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch.gch NewsFeed_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/main.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedAppDelegate.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/RootViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIAuthenticationDialog.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataCompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataDecompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDownloadCache.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIFormDataRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIHTTPRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIInputStream.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASINetworkQueue.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/Reachability.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/JSONKit.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedItem.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/FeedTableCell.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NSNotificationCenter+LNExtension.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ArticleWebViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/UIImage+LNExtensions.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/main.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedAppDelegate.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/RootViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIAuthenticationDialog.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataCompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataDecompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDownloadCache.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIFormDataRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIHTTPRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIInputStream.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASINetworkQueue.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/Reachability.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/JSONKit.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedItem.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/FeedTableCell.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NSNotificationCenter+LNExtension.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ArticleWebViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/UIImage+LNExtensions.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed normal armv6
-cLd /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed normal armv7
-cCreateUniversalBinary /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed normal "armv6 armv7"
-cGenerateDSYMFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app.dSYM /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed
-cProcessProductPackaging "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/7F834EF8-CB17-48B9-B0D6-9804E0FE644D.mobileprovision" /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision
-cTouch /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent
-cCodeSign /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk
-c000000004D7401890000000000000110
-t1299448201
-s272
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist
-c000000004D4F6A4700000000000001A7
-t1297050183
-s423
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
-c000000004D4F6A4700000000000001E5
-t1297050183
-s485
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
-c000000004D54D1B500000000002CAD60
-t1297404341
-s2927968
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
-c000000004D54D12700000000000004CF
-t1297404199
-s1231
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
-c000000004D54CFAE0000000000007AC8
-t1297403822
-s31432
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
-c000000004D54CFAE00000000000080D0
-t1297403822
-s32976
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFNumber.h
-c000000004D54CFAE0000000000000EDF
-t1297403822
-s3807
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
-c000000004D54CFAF000000000000B7CA
-t1297403823
-s47050
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
-c000000004D54CFAF0000000000000AB3
-t1297403823
-s2739
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004D54D18C00000000003532A0
-t1297404300
-s3486368
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004D54D1F500000000003E22F0
-t1297404405
-s4072176
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004D54D1DD0000000000001466
-t1297404381
-s5222
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h
-c000000004D54D1DD0000000000001B27
-t1297404381
-s6951
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSAutoreleasePool.h
-c000000004D54D1DD00000000000001CB
-t1297404381
-s459
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSData.h
-c000000004D54D1DD0000000000001777
-t1297404381
-s6007
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h
-c000000004D54D1DD0000000000000E3B
-t1297404381
-s3643
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSError.h
-c000000004D54D1DD0000000000001DE5
-t1297404381
-s7653
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h
-c000000004D54D1DD0000000000002033
-t1297404381
-s8243
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSNull.h
-c000000004D54D1DD00000000000000B8
-t1297404381
-s184
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h
-c000000004D54D1DD0000000000002E87
-t1297404381
-s11911
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h
-c000000004D54D1DD0000000000006506
-t1297404381
-s25862
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/MobileCoreServices.h
-c000000004D54D32C00000000000000EB
-t1297404716
-s235
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c000000004D54D32D0000000000094C50
-t1297404717
-s609360
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004D54D49500000000000000C4
-t1297405077
-s196
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
-c000000004D54D0D40000000000001A58
-t1297404116
-s6744
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c000000004D54D0E700000000000B0CA0
-t1297404135
-s724128
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004D5A28AB0000000000000AA1
-t1297754283
-s2721
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004D5A292A0000000000CA2AE0
-t1297754410
-s13249248
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/Availability.h
-c000000004D4F74C20000000000001B19
-t1297052866
-s6937
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/AvailabilityMacros.h
-c000000004D4F74C20000000000007A5E
-t1297052866
-s31326
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/CommonCrypto/CommonHMAC.h
-c000000004D4F6E4A0000000000000DE2
-t1297051210
-s3554
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/TargetConditionals.h
-c000000004D4F74C200000000000031E9
-t1297052866
-s12777
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/arpa/inet.h
-c000000004D54C5330000000000001533
-t1297401139
-s5427
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/assert.h
-c000000004D4F6E900000000000000F6E
-t1297051280
-s3950
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/ifaddrs.h
-c000000004D54C53300000000000008F5
-t1297401139
-s2293
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/math.h
-c000000004D4F6E4300000000000004F1
-t1297051203
-s1265
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netdb.h
-c000000004D54C533000000000000307F
-t1297401139
-s12415
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netinet/in.h
-c000000004D54CB250000000000006BAC
-t1297402661
-s27564
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netinet6/in6.h
-c000000004D54CB24000000000000638F
-t1297402660
-s25487
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/objc/runtime.h
-c000000004D54CADF00000000000063AF
-t1297402591
-s25519
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/stdio.h
-c000000004D4F6E910000000000004763
-t1297051281
-s18275
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/stdlib.h
-c000000004D4F6E9100000000000030A7
-t1297051281
-s12455
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/string.h
-c000000004D4F6E910000000000001A3A
-t1297051281
-s6714
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/errno.h
-c000000004D54CB270000000000002A36
-t1297402663
-s10806
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/socket.h
-c000000004D54CB290000000000005ACF
-t1297402665
-s23247
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/zlib.h
-c000000004D54C61500000000000102A5
-t1297401365
-s66213
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/limits.h
-c000000004D09AC6C0000000000000C7E
-t1292479596
-s3198
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/stddef.h
-c000000004D09AC6C0000000000003197
-t1292479596
-s12695
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/stdint.h
-c000000004D09AD56000000000000190C
-t1292479830
-s6412
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libz.1.2.3.dylib
-c000000004D54C6160000000000020FE0
-t1297401366
-s135136
-
-N/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/0D9DAEE1-B466-4077-9357-6603BCA53E3B.mobileprovision
-c000000004E3727840000000000002A8A
-t1312237444
-s10890
-
-N/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/7F834EF8-CB17-48B9-B0D6-9804E0FE644D.mobileprovision
-c000000004E77AB8D0000000000002D11
-t1316465549
-s11537
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.h
-c000000004E4F9F3B0000000000000453
-t1313840955
-s1107
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m
-c000000004E4F9F3B0000000000003E08
-t1313840955
-s15880
-i"ASIAuthenticationDialog.h"
-i"ASIHTTPRequest.h"
-i<QuartzCore/QuartzCore.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASICacheDelegate.h
-c000000004E4F9F3B000000000000141F
-t1313840955
-s5151
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.h
-c000000004E4F9F3B000000000000072C
-t1313840955
-s1836
-i<Foundation/Foundation.h>
-i<zlib.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m
-c000000004E4F9F3B0000000000001A4A
-t1313840955
-s6730
-i"ASIDataCompressor.h"
-i"ASIHTTPRequest.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.h
-c000000004E4F9F3B00000000000006A3
-t1313840955
-s1699
-i<Foundation/Foundation.h>
-i<zlib.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m
-c000000004E4F9F3B0000000000001906
-t1313840955
-s6406
-i"ASIDataDecompressor.h"
-i"ASIHTTPRequest.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.h
-c000000004E4F9F3B00000000000007CC
-t1313840955
-s1996
-i<Foundation/Foundation.h>
-i"ASICacheDelegate.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m
-c000000004E4F9F3B0000000000004561
-t1313840955
-s17761
-i"ASIDownloadCache.h"
-i"ASIHTTPRequest.h"
-i<CommonCrypto/CommonHMAC.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.h
-c000000004E4F9F3B0000000000000A85
-t1313840955
-s2693
-i<Foundation/Foundation.h>
-i"ASIHTTPRequest.h"
-i"ASIHTTPRequestConfig.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m
-c000000004E4F9F3B0000000000002BD1
-t1313840955
-s11217
-i"ASIFormDataRequest.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.h
-c000000004E4F9F3B000000000000AFE9
-t1313840955
-s45033
-i<Foundation/Foundation.h>
-i<CFNetwork/CFNetwork.h>
-i<UIKit/UIKit.h>
-i<stdio.h>
-i"ASIHTTPRequestConfig.h"
-i"ASIHTTPRequestDelegate.h"
-i"ASIProgressDelegate.h"
-i"ASICacheDelegate.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m
-c000000004E4F9F3B000000000002CA76
-t1313840955
-s182902
-i"ASIHTTPRequest.h"
-i"Reachability.h"
-i"ASIAuthenticationDialog.h"
-i<MobileCoreServices/MobileCoreServices.h>
-i<SystemConfiguration/SystemConfiguration.h>
-i"ASIInputStream.h"
-i"ASIDataDecompressor.h"
-i"ASIDataCompressor.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequestConfig.h
-c000000004E4F9F3B0000000000000478
-t1313840955
-s1144
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequestDelegate.h
-c000000004E4F9F3B000000000000063E
-t1313840955
-s1598
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.h
-c000000004E4F9F3B00000000000003C9
-t1313840955
-s969
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m
-c000000004E4F9F3B0000000000000C32
-t1313840955
-s3122
-i"ASIInputStream.h"
-i"ASIHTTPRequest.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.h
-c000000004E4F9F3B000000000000120D
-t1313840955
-s4621
-i<Foundation/Foundation.h>
-i"ASIHTTPRequestDelegate.h"
-i"ASIProgressDelegate.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m
-c000000004E4F9F3B0000000000002C8D
-t1313840955
-s11405
-i"ASINetworkQueue.h"
-i"ASIHTTPRequest.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIProgressDelegate.h
-c000000004E4F9F3B0000000000000678
-t1313840955
-s1656
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.h
-c000000004E6DB4C700000000000001AD
-t1315812551
-s429
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m
-c000000004E6DB4A30000000000000A6F
-t1315812515
-s2671
-i"ArticleWebViewController.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
-c000000004E6DD281000000000000E52F
-t1315820161
-s58671
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.h
-c000000004E6DBAA800000000000006EF
-t1315814056
-s1775
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m
-c000000004E6DB9F70000000000000698
-t1315813879
-s1688
-i"FeedTableCell.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-c000000004E6DD26B000000000000BBD3
-t1315820139
-s48083
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.h
-c000000004E6C17770000000000000201
-t1315706743
-s513
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m
-c000000004E6C17770000000000000393
-t1315706743
-s915
-i"NSNotificationCenter+LNExtension.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.h
-c000000004E6C177700000000000001D2
-t1315706743
-s466
-i<UIKit/UIKit.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m
-c000000004E6D58E40000000000000B02
-t1315789028
-s2818
-i"NewsFeedAppDelegate.h"
-i"RootViewController.h"
-i"NewsFeedController.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.h
-c000000004E6D98F8000000000000025A
-t1315805432
-s602
-i<Foundation/Foundation.h>
-i"ASIHTTPRequestDelegate.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m
-c000000004E7CEC5C00000000000019D6
-t1316809820
-s6614
-i"NewsFeedController.h"
-i"ASIHTTPRequest.h"
-i"JSONKit.h"
-i"NewsFeedItem.h"
-i"NSNotificationCenter+LNExtension.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.h
-c000000004E6D9D540000000000000335
-t1315806548
-s821
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m
-c000000004E6D9E770000000000000C0D
-t1315806839
-s3085
-i"NewsFeedItem.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.h
-c000000004E6D98F800000000000001D4
-t1315805432
-s468
-i<UIKit/UIKit.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m
-c000000004E7CED3C0000000000003CB7
-t1316810044
-s15543
-i"RootViewController.h"
-i"NewsFeedItem.h"
-i"NewsFeedController.h"
-i"FeedTableCell.h"
-i"ArticleWebViewController.h"
-i"UIImage+LNExtensions.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.h
-c000000004E6D7B6500000000000007B0
-t1315797861
-s1968
-i<Foundation/Foundation.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m
-c000000004E6D7B650000000000000A47
-t1315797861
-s2631
-i"UIImage+LNExtensions.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.h
-c000000004DFA6CC00000000000002DBE
-t1308257472
-s11710
-i<stddef.h>
-i<stdint.h>
-i<limits.h>
-i<TargetConditionals.h>
-i<AvailabilityMacros.h>
-i<Foundation/NSArray.h>
-i<Foundation/NSData.h>
-i<Foundation/NSDictionary.h>
-i<Foundation/NSError.h>
-i<Foundation/NSObjCRuntime.h>
-i<Foundation/NSString.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m
-c000000004DFA6CC0000000000002A5A3
-t1308257472
-s173475
-i<stdio.h>
-i<stdlib.h>
-i<stdint.h>
-i<string.h>
-i<assert.h>
-i<sys/errno.h>
-i<math.h>
-i<limits.h>
-i<objc/runtime.h>
-i"JSONKit.h"
-i<CoreFoundation/CFString.h>
-i<CoreFoundation/CFArray.h>
-i<CoreFoundation/CFDictionary.h>
-i<CoreFoundation/CFNumber.h>
-i<Foundation/NSArray.h>
-i<Foundation/NSAutoreleasePool.h>
-i<Foundation/NSData.h>
-i<Foundation/NSDictionary.h>
-i<Foundation/NSException.h>
-i<Foundation/NSNull.h>
-i<Foundation/NSObjCRuntime.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
-c000000004E6428AB0000000000005FF8
-t1315186859
-s24568
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch
-c000000004E6428AB0000000000000142
-t1315186859
-s322
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.h
-c000000004E4F9F3B0000000000001D25
-t1313840955
-s7461
-i<Foundation/Foundation.h>
-i<SystemConfiguration/SystemConfiguration.h>
-i<netinet/in.h>
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m
-c000000004E4F9F3B0000000000005E0C
-t1313840955
-s24076
-i<sys/socket.h>
-i<netinet/in.h>
-i<netinet6/in6.h>
-i<arpa/inet.h>
-i<ifaddrs.h>
-i<netdb.h>
-i<CoreFoundation/CoreFoundation.h>
-i"Reachability.h"
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
-c000000004E6D61510000000000006260
-t1315791185
-s25184
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
-c000000004E6BFE75000000000000535A
-t1315700341
-s21338
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-t1316810064
-s612
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app.dSYM
-t1316810059
-s102
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/CrunchTitle.png
-t1315817775
-s14920
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default-Portrait.png
-t1315817779
-s487613
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default.png
-t1315817776
-s147532
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/FeedTableCell-iPad.nib
-t1316808945
-s8342
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/FeedTableCell.nib
-t1316808945
-s6870
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Icon.png
-t1315817775
-s22434
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Info.plist
-t1315817775
-s955
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/MainWindow-iPad.nib
-t1315791254
-s2458
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/MainWindow.nib
-t1315791254
-s2457
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed
-t1316810057
-s1109312
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/PkgInfo
-t1315817775
-s8
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/ResourceRules.plist
-t1315791254
-s485
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/RootViewController.nib
-t1315791254
-s1516
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision
-t1316808963
-s11537
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent
-t1316808963
-s627
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIAuthenticationDialog.o
-t1316808957
-s103960
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataCompressor.o
-t1316808956
-s22492
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataDecompressor.o
-t1316808956
-s22396
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDownloadCache.o
-t1316808956
-s57904
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIFormDataRequest.o
-t1316808956
-s45468
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIHTTPRequest.o
-t1316808958
-s477328
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIInputStream.o
-t1316808957
-s27284
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASINetworkQueue.o
-t1316808957
-s56728
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ArticleWebViewController.o
-t1316808957
-s52304
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/FeedTableCell.o
-t1316808957
-s54160
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/JSONKit.o
-t1316808957
-s239540
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NSNotificationCenter+LNExtension.o
-t1316808957
-s8528
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed
-t1316810055
-s564560
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed.LinkFileList
-c000000004E6D619600000000000009FD
-t1315791254
-s2557
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedAppDelegate.o
-t1316808956
-s53512
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedController.o
-t1316809834
-s39344
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedItem.o
-t1316808957
-s21952
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/Reachability.o
-t1316808957
-s31888
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/RootViewController.o
-t1316810049
-s74636
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/UIImage+LNExtensions.o
-t1316808957
-s12920
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/main.o
-t1316808956
-s6456
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIAuthenticationDialog.o
-t1316808957
-s102808
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataCompressor.o
-t1316808957
-s22384
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataDecompressor.o
-t1316808957
-s22328
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDownloadCache.o
-t1316808957
-s56692
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIFormDataRequest.o
-t1316808957
-s44676
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIHTTPRequest.o
-t1316808958
-s467536
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIInputStream.o
-t1316808957
-s27012
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASINetworkQueue.o
-t1316808957
-s56124
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ArticleWebViewController.o
-t1316808958
-s52088
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/FeedTableCell.o
-t1316808958
-s53808
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/JSONKit.o
-t1316808958
-s220088
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NSNotificationCenter+LNExtension.o
-t1316808957
-s8464
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed
-t1316810055
-s539968
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed.LinkFileList
-c000000004E6D619600000000000009FD
-t1315791254
-s2557
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedAppDelegate.o
-t1316808957
-s53400
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedController.o
-t1316809834
-s38920
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedItem.o
-t1316808957
-s21636
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/Reachability.o
-t1316808957
-s31052
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/RootViewController.o
-t1316810049
-s73604
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/UIImage+LNExtensions.o
-t1316808958
-s12096
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/main.o
-t1316808957
-s6440
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/CrunchTitle.png
-c000000004E6DC1E70000000000002E75
-t1315815911
-s11893
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default-Portrait.png
-c000000004E6DBF0400000000000792FC
-t1315815172
-s496380
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default.png
-c000000004E6DBF710000000000022978
-t1315815281
-s141688
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon.png
-c000000004E6DC91F00000000000056F5
-t1315817759
-s22261
-
-N/Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m
-c000000004E6428AB0000000000000166
-t1315186859
-s358
-i<UIKit/UIKit.h>
-
-N/var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch.gch
-t1316808955
-s10184604
-
-N/var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch.gch
-t1316808956
-s10647452
-
-NNewsFeed-Info.plist
-c000000004E6DC8E700000000000003F7
-t1315817703
-s1015
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies338502844#338502845#0(0"0(0#1#0"8660398400#0"0#
-
-CCodeSign /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-s338502861.206339
-e338502864.456982
-r1
-xCodeSign
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-lSLF07#2@42"CodeSign build/Debug-iphoneos/NewsFeed.app338502861#338502864#0(0"0(0#0#76"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app8648258848#674"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: M. Michael Acosta (6CGAPCCUF7)" --resource-rules=/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/ResourceRules.plist --entitlements /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIAuthenticationDialog.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.165424
-e338501757.539924
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIAuthenticationDialog.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m338501756#338501757#0(0"0(0#0#83"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m8677388160#1841"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIAuthenticationDialog.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataCompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.166682
-e338501756.824306
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataCompressor.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m338501756#338501756#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m8677172608#1829"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataCompressor.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataDecompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.167927
-e338501756.821201
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataDecompressor.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@87"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m338501756#338501756#0(0"0(0#0#79"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m8676961728#1833"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDataDecompressor.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDownloadCache.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.169131
-e338501756.824498
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDownloadCache.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m338501756#338501756#0(0"0(0#0#76"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m8676266272#1827"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIDownloadCache.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIFormDataRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.170707
-e338501756.824688
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIFormDataRequest.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@86"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m338501756#338501756#0(0"0(0#0#78"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m8676028384#1831"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIFormDataRequest.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIHTTPRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.821324
-e338501758.609738
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIHTTPRequest.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m338501756#338501758#0(0"0(0#0#74"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m8677119808#1823"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIHTTPRequest.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIInputStream.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.822175
-e338501757.021447
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIInputStream.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m338501756#338501757#0(0"0(0#0#74"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m8676814624#1823"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASIInputStream.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASINetworkQueue.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.823013
-e338501757.110436
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASINetworkQueue.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m338501756#338501757#0(0"0(0#0#75"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m8676159584#1825"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ASINetworkQueue.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ArticleWebViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501757.109593
-e338501757.240635
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ArticleWebViewController.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m338501757#338501757#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m8674730112#1836"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/ArticleWebViewController.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/FeedTableCell.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501757.021535
-e338501757.173843
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/FeedTableCell.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@74"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m338501757#338501757#0(0"0(0#0#66"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m8676716800#1814"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/FeedTableCell.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/JSONKit.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.826759
-e338501757.946664
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/JSONKit.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@60"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m338501756#338501757#0(0"0(0#0#52"/Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m8675029088#1794"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/JSONKit.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NSNotificationCenter+LNExtension.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501757.072149
-e338501757.239327
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NSNotificationCenter+LNExtension.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@93"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m338501757#338501757#0(0"0(0#0#85"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m8675135072#1852"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NSNotificationCenter+LNExtension.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedAppDelegate.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.162171
-e338501756.820922
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedAppDelegate.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m338501756#338501756#0(0"0(0#0#72"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m8677479808#1826"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedAppDelegate.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338502632.406928
-e338502634.039979
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedController.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m338502632#338502634#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m8654174432#1824"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedController.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedItem.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.827756
-e338501757.072067
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedItem.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m338501756#338501757#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m8674851808#1812"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeedItem.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/Reachability.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.824782
-e338501757.484900
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/Reachability.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m338501756#338501757#0(0"0(0#0#70"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m8665431040#1817"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/Reachability.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/RootViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338502845.742669
-e338502849.384532
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/RootViewController.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m338502845#338502849#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m8674821184#1824"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/RootViewController.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/UIImage+LNExtensions.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501757.110498
-e338501757.240822
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/UIImage+LNExtensions.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m338501757#338501757#0(0"0(0#0#73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m8674492992#1828"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/UIImage+LNExtensions.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/main.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501756.087134
-e338501756.820651
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/main.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m338501756#338501756#0(0"0(0#0#49"/Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m8678009056#1788"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/main.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIAuthenticationDialog.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.241661
-e338501757.540133
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIAuthenticationDialog.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m338501757#338501757#0(0"0(0#0#83"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m8677357056#1841"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIAuthenticationDialog.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIAuthenticationDialog.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataCompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.242688
-e338501757.346511
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataCompressor.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m338501757#338501757#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m8677030112#1829"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataCompressor.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataCompressor.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataDecompressor.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.346636
-e338501757.459019
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataDecompressor.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@87"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m338501757#338501757#0(0"0(0#0#79"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m8683713056#1833"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDataDecompressor.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDataDecompressor.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDownloadCache.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.348228
-e338501757.542400
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDownloadCache.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m338501757#338501757#0(0"0(0#0#76"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m8680572928#1827"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIDownloadCache.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIDownloadCache.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIFormDataRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.349249
-e338501757.495771
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIFormDataRequest.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@86"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m338501757#338501757#0(0"0(0#0#78"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m8677861792#1831"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIFormDataRequest.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIFormDataRequest.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIHTTPRequest.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.459148
-e338501758.611535
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIHTTPRequest.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m338501757#338501758#0(0"0(0#0#74"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m8666936960#1823"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIHTTPRequest.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIHTTPRequest.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIInputStream.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.485162
-e338501757.599235
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIInputStream.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m338501757#338501757#0(0"0(0#0#74"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m8671678784#1823"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASIInputStream.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASIInputStream.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASINetworkQueue.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.495905
-e338501757.894167
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASINetworkQueue.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m338501757#338501757#0(0"0(0#0#75"/Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m8670908992#1825"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/ASIHTTPRequest/ASINetworkQueue.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ASINetworkQueue.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ArticleWebViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.926873
-e338501758.041164
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ArticleWebViewController.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m338501757#338501758#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m8676668480#1836"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/ArticleWebViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/ArticleWebViewController.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/FeedTableCell.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.894296
-e338501758.026278
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/FeedTableCell.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@74"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m338501757#338501758#0(0"0(0#0#66"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m8683430720#1814"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/FeedTableCell.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/JSONKit.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.542515
-e338501758.161581
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/JSONKit.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@60"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m338501757#338501758#0(0"0(0#0#52"/Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m8677315968#1794"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/JSONKit.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/JSONKit.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NSNotificationCenter+LNExtension.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.925877
-e338501757.984483
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NSNotificationCenter+LNExtension.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@93"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m338501757#338501757#0(0"0(0#0#85"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m8677797504#1852"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NSNotificationCenter+LNExtension.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NSNotificationCenter+LNExtension.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedAppDelegate.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.239452
-e338501757.348126
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedAppDelegate.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m338501757#338501757#0(0"0(0#0#72"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m8680890496#1826"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedAppDelegate.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedAppDelegate.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338502632.457912
-e338502634.040309
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedController.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m338502632#338502634#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m8666459936#1824"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedController.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedItem.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.599449
-e338501757.925293
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedItem.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m338501757#338501757#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m8676069792#1812"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/NewsFeedItem.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeedItem.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/Reachability.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.540240
-e338501757.925525
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/Reachability.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m338501757#338501757#0(0"0(0#0#70"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m8681074592#1817"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Reachability/Reachability.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/Reachability.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/RootViewController.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338502845.861333
-e338502849.384718
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/RootViewController.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m338502845#338502849#0(0"0(0#0#71"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m8632440480#1824"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/RootViewController.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/RootViewController.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/UIImage+LNExtensions.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.945603
-e338501758.025969
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/UIImage+LNExtensions.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m338501757#338501758#0(0"0(0#0#73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m8676157856#1828"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/UIImage+LNExtensions.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/UIImage+LNExtensions.o0#
-
-CCompileC build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/main.o /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501757.173970
-e338501757.240444
-r1
-xCompileC
-xbuild/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/main.o
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m338501757#338501757#0(0"0(0#0#49"/Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m8673609120#1788"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -include /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/main.m -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/main.o0#
-
-CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
-s338501733.997859
-e338501746.247159
-r1
-xCompileXIB
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@41"CompileXIB Classes/FeedTableCell-iPad.xib338501733#338501746#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#73"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib8673313600#579"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/FeedTableCell-iPad.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell-iPad.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
-
-CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-s338501733.909162
-e338501746.279881
-r1
-xCompileXIB
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@36"CompileXIB Classes/FeedTableCell.xib338501733#338501746#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#68"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib33495956025376816#569"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/FeedTableCell.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Classes/FeedTableCell.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
-
-CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
-s337484054.621240
-e337484054.996316
-r1
-xCompileXIB
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib337484054#337484054#0(0"0(0#0#57"/Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib8668109408#555"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/MainWindow.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
-
-CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
-s337484054.622727
-e337484054.990532
-r1
-xCompileXIB
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib
-lSLF07#2@45"CompileXIB Resources-iPad/MainWindow-iPad.xib337484054#337484054#0(0"0(0#0#77"/Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib8666622720#580"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/MainWindow-iPad.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/Resources-iPad/MainWindow-iPad.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
-
-CCompileXIB /Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
-s337484054.621786
-e337484054.980591
-r1
-xCompileXIB
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib
-lSLF07#2@33"CompileXIB RootViewController.xib337484054#337484054#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib8667277984#571"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/RootViewController.nib /Users/lesnguye/Projects/NewsFeed/NewsFeed/RootViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
-
-CCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/CrunchTitle.png images/CrunchTitle.png
-s337510575.571185
-e337510575.954697
-r1
-xCopyPNGFile
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/CrunchTitle.png
-ximages/CrunchTitle.png
-lSLF07#2@84"CopyPNGFile build/Debug-iphoneos/NewsFeed.app/CrunchTitle.png images/CrunchTitle.png337510575#337510575#0(0"0(0#0#65"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/CrunchTitle.png8691890880#490"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/CrunchTitle.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/CrunchTitle.png0#
-
-CCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default-Portrait.png images/Default-Portrait.png
-s337510575.570152
-e337510579.540964
-r1
-xCopyPNGFile
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default-Portrait.png
-ximages/Default-Portrait.png
-lSLF07#2@94"CopyPNGFile build/Debug-iphoneos/NewsFeed.app/Default-Portrait.png images/Default-Portrait.png337510575#337510579#0(0"0(0#0#70"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default-Portrait.png8699532320#500"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default-Portrait.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default-Portrait.png0#
-
-CCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default.png images/Default.png
-s337510575.570675
-e337510576.754810
-r1
-xCopyPNGFile
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default.png
-ximages/Default.png
-lSLF07#2@76"CopyPNGFile build/Debug-iphoneos/NewsFeed.app/Default.png images/Default.png337510575#337510576#0(0"0(0#0#61"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default.png8697865920#482"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Default.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Default.png0#
-
-CCopyPNGFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Icon.png images/Icon.png
-s337510575.571703
-e337510575.968830
-r1
-xCopyPNGFile
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Icon.png
-ximages/Icon.png
-lSLF07#2@70"CopyPNGFile build/Debug-iphoneos/NewsFeed.app/Icon.png images/Icon.png337510575#337510575#0(0"0(0#0#58"/Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon.png8687112256#476"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lesnguye/Projects/NewsFeed/NewsFeed/images/Icon.png /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Icon.png0#
-
-CCpResource build/Debug-iphoneos/NewsFeed.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
-s337484054.597587
-e337484054.621129
-r1
-xCpResource
-xbuild/Debug-iphoneos/NewsFeed.app/ResourceRules.plist
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
-lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist337484054#337484054#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist8616030048#503"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app0#
-
-CCreateUniversalBinary /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed normal "armv6 armv7"
-s338502855.589195
-e338502857.063824
-r1
-xCreateUniversalBinary
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed
-xnormal
-xarmv6 armv7
-lSLF07#2@85"CreateUniversalBinary build/Debug-iphoneos/NewsFeed.app/NewsFeed normal "armv6 armv7"338502855#338502857#0(0"0(0#0#54"/Users/lesnguye/Projects/NewsFeed/NewsFeed/armv6 armv78658884768#542"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed -output /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed0#
-
-CGenerateDSYMFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app.dSYM /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed
-s338502857.063997
-e338502861.125425
-r1
-xGenerateDSYMFile
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app.dSYM
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed
-lSLF07#2@98"GenerateDSYMFile build/Debug-iphoneos/NewsFeed.app.dSYM build/Debug-iphoneos/NewsFeed.app/NewsFeed338502857#338502861#0(0"0(0#0#85"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed8674966496#377"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/NewsFeed -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app.dSYM0#
-
-CLd /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed normal armv6
-s338502849.385003
-e338502855.589116
-r1
-xLd
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed
-xnormal
-xarmv6
-lSLF07#2@128"Link /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed338502849#338502855#0(0"0(0#0#0"8655251232#977"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -filelist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed.LinkFileList -dead_strip -miphoneos-version-min=4.3 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -framework SystemConfiguration -framework MobileCoreServices -lz.1.2.3 -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv6/NewsFeed0#
-
-CLd /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed normal armv7
-s338502849.385612
-e338502855.588728
-r1
-xLd
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed
-xnormal
-xarmv7
-lSLF07#2@128"Link /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed338502849#338502855#0(0"0(0#0#0"8652594400#977"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -filelist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed.LinkFileList -dead_strip -miphoneos-version-min=4.3 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -framework SystemConfiguration -framework MobileCoreServices -lz.1.2.3 -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/Objects-normal/armv7/NewsFeed0#
-
-CProcessInfoPlistFile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Info.plist NewsFeed-Info.plist
-s337510575.565440
-e337510575.568624
-r1
-xProcessInfoPlistFile
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Info.plist
-xNewsFeed-Info.plist
-lSLF07#2@27"Process NewsFeed-Info.plist337510575#337510575#0(0"0(0#0#62"/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed-Info.plist8707436128#582"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility NewsFeed-Info.plist -genpkginfo /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/ResourceRules.plist -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/Info.plist0#
-
-CProcessPCH /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch.gch NewsFeed_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-s338501746.280044
-e338501755.964861
-r1
-xProcessPCH
-x/var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch.gch
-xNewsFeed_Prefix.pch
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile NewsFeed_Prefix.pch338501746#338501755#0(0"0(0#0#62"/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch8677661248#1681"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv6 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch -o /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-btxdrgccjyzilcckxgdygbotfunb/NewsFeed_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch.gch NewsFeed_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338501746.280961
-e338501756.087021
-r1
-xProcessPCH
-x/var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch.gch
-xNewsFeed_Prefix.pch
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile NewsFeed_Prefix.pch338501746#338501756#0(0"0(0#0#62"/Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch8683354432#1681"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-generated-files.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-own-target-headers.hmap -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-all-target-headers.hmap -iquote /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed-project-headers.hmap -F/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/include -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources/armv7 -I/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/DerivedSources -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/NewsFeed_Prefix.pch -o /var/folders/lt/ltWQ2icmHnu0Shqc3mF3V++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NewsFeed_Prefix-fkcfcnxpdkdojkgjadoomkruydvg/NewsFeed_Prefix.pch.gch0#
-
-CProcessProductPackaging "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/0D9DAEE1-B466-4077-9357-6603BCA53E3B.mobileprovision" /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision
-s337484058.262181
-e337484058.341358
-r1
-xProcessProductPackaging
-x/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/0D9DAEE1-B466-4077-9357-6603BCA53E3B.mobileprovision
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision
-lSLF07#2@196"ProcessProductPackaging "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/0D9DAEE1-B466-4077-9357-6603BCA53E3B.mobileprovision" build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision337484058#337484058#0(0"0(0#0#101"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision8666145216#435"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/0D9DAEE1-B466-4077-9357-6603BCA53E3B.mobileprovision" -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision0#
-
-CProcessProductPackaging "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/7F834EF8-CB17-48B9-B0D6-9804E0FE644D.mobileprovision" /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision
-s338501763.199866
-e338501763.300937
-r1
-xProcessProductPackaging
-x/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/7F834EF8-CB17-48B9-B0D6-9804E0FE644D.mobileprovision
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision
-lSLF07#2@196"ProcessProductPackaging "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/7F834EF8-CB17-48B9-B0D6-9804E0FE644D.mobileprovision" build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision338501763#338501763#0(0"0(0#0#101"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision8677242304#435"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lesnguye/Library/MobileDevice/Provisioning Profiles/7F834EF8-CB17-48B9-B0D6-9804E0FE644D.mobileprovision" -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app/embedded.mobileprovision0#
-
-CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent
-s338501763.376242
-e338501763.414870
-r1
-xProcessProductPackaging
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent
-lSLF07#2@178"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent338501763#338501763#0(0"0(0#0#108"/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent8675066560#443"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist -entitlements -format xml -o /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/NewsFeed.build/Debug-iphoneos/NewsFeed.build/NewsFeed.xcent0#
-
-CTouch /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-s338502861.125802
-e338502861.206076
-r1
-xTouch
-x/Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app
-lSLF07#2@82"Touch /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app338502861#338502861#0(0"0(0#0#0"8653528320#273"    cd /Users/lesnguye/Projects/NewsFeed/NewsFeed    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/lesnguye/Projects/NewsFeed/NewsFeed/build/Debug-iphoneos/NewsFeed.app0#
-
