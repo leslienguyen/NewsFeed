@@ -23,7 +23,7 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 
 @property (nonatomic, readwrite, retain) NSMutableArray *entries;
 
-- (void)_makeRequest;
+- (void)parseData:(NSString*)jsonString;
 - (void)loadCache;
 
 @end
@@ -43,14 +43,8 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 	return self;
 }
 
+
 - (void)makeRequest
-{
-	//performing network request in background to not block the UI
-	[self performSelectorInBackground:@selector(_makeRequest) withObject:nil];
-}
-
-
-- (void)_makeRequest
 {
 	//create my own autorelease pool because this is in a background thread
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -77,6 +71,11 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 	NSString *jsonString = [request responseString];
 	//NSLog(@"%@", jsonString);
 	
+	[self performSelectorInBackground:@selector(parseData:) withObject:jsonString];
+}
+
+- (void)parseData:(NSString*)jsonString
+{	
 	NSDictionary *rootResults = [jsonString objectFromJSONString];
 	NSDictionary *responseData = [rootResults objectForKey:@"responseData"];
 	NSDictionary *feed = [responseData objectForKey:@"feed"];
