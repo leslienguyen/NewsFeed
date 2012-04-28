@@ -16,7 +16,9 @@
 	NSString *myAuthor;
 	NSDate *myPublishedDate;
 	NSString *mySummary;
-	NSString *myContent;	
+	NSString *myContent;
+	NSString *myImageUrl;
+    NSString *myThumbnailUrl;
 }
 
 @property (nonatomic, readwrite, retain) NSString *title;
@@ -27,5 +29,7 @@
 @property (nonatomic, readwrite, retain) NSString *content;
 @property (nonatomic, readwrite, retain) UIImage *thumbnail;
 @property (nonatomic, readwrite, retain) UIImage *image;
+@property (nonatomic, readwrite, retain) NSString *thumbnailUrl;
+@property (nonatomic, readwrite, retain) NSString *imageUrl;
 
 @end

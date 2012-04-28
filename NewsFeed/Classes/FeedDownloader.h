@@ -13,15 +13,23 @@ extern NSString *NewsFeedDidChangeNotification;
 extern NSString *NewsFeedRequestDidFailNotification;
 extern NSString *NewsFeedErrorKey;
 
-@interface NewsFeedController : NSObject <ASIHTTPRequestDelegate>
+typedef void(^FeedBlock)(NSArray *);
+
+
+typedef enum {
+    FeedTypeTechcrunch,
+    FeedTypeGizmodo
+} FeedType;
+
+@interface FeedDownloader : NSObject <ASIHTTPRequestDelegate>
 {
 	NSMutableArray *myEntries;
 }
 
 @property (nonatomic, readonly, retain) NSMutableArray *entries; 
 
-+(NewsFeedController*)sharedController;
-- (void)makeRequest;
++(FeedDownloader*)sharedController;
+- (void)downloadFeed:(FeedType)type withSuccessBlock:(FeedBlock)block;
 - (void)saveCache;
 
 @end

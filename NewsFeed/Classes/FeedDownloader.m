@@ -6,31 +6,46 @@
 //  Copyright 2011 Leslie Nguyen. All rights reserved.
 //
 
-#import "NewsFeedController.h"
+#import "FeedDownloader.h"
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 #import "NewsFeedItem.h"
 #import "NSNotificationCenter+LNExtension.h"
+#import "DDURLParser.h"
 
-static NewsFeedController *theSharedController = nil;
+static FeedDownloader *theSharedController = nil;
 
 NSString *NewsFeedDidChangeNotification = @"NewsFeedDidChangeNotification";
 NSString *NewsFeedRequestDidFailNotification = @"NewsFeedRequestDidFailNotification";
 NSString *NewsFeedErrorKey = @"NewsFeedErrorKey";
 NSString *NewsFeedPathString = @"NewsFeedEntries";
 
-@interface NewsFeedController()
+@interface FeedDownloader()
 
 @property (nonatomic, readwrite, retain) NSMutableArray *entries;
 
+- (void)makeRequest:(NSString*)feedString;
 - (void)parseData:(NSString*)jsonString;
 - (void)loadCache;
 
 @end
 
-@implementation NewsFeedController
+@implementation FeedDownloader
 
 @synthesize entries = myEntries;
+
++ (FeedDownloader *)sharedController
+{
+    @synchronized(self) 
+	{		
+        if (theSharedController == nil) 
+		{
+            theSharedController = [[self alloc] init]; // assignment not done here
+        }
+    }
+	
+    return theSharedController;
+}
 
 - (id)init
 {
@@ -43,14 +58,26 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 	return self;
 }
 
+- (void)downloadFeed:(FeedType)type withSuccessBlock:(FeedBlock)block
+{
+    switch (type) {
+        case FeedTypeTechcrunch:
+            [self makeRequest:@"http://feeds.feedburner.com/TechCrunch"];
+            break;
+            
+        default:
+            break;
+    }
+}
 
-- (void)makeRequest
+
+- (void)makeRequest:(NSString *)feedString
 {
 	//create my own autorelease pool because this is in a background thread
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	NSLog(@"[NewsFeedController makeRequest:]");
-	NSURL *url = [NSURL URLWithString:@"https://ajax.googleapis.com/ajax/services/feed/load?q=http://feeds.feedburner.com/TechCrunch&v=1.0&output=json&num=18"];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/feed/load?q=%@&v=1.0&output=json&num=18", feedString]];
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
 	[request setDelegate:self];
 	[request startAsynchronous];	
@@ -113,8 +140,21 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 				NSURL *url = nil;
 				UIImage *image = nil;
 			
-//				//get the image
-//				urlString = [content objectForKey:@"url"];
+				//get the image
+				urlString = [content objectForKey:@"url"];
+                
+                //remove the width param
+                DDURLParser *parser = [[[DDURLParser alloc] initWithURLString:urlString] autorelease];
+                NSString *y = [parser valueForVariable:@"w"];
+                
+                if(y != nil)
+                {
+                    NSString *width = [NSString stringWithFormat:@"?w=%@", y];
+                    urlString = [urlString stringByReplacingOccurrencesOfString:width withString:@""]; 
+                }
+                   
+                [item setImageUrl:urlString];
+                
 //				if([urlString length] > 0)
 //				{
 //					url = [NSURL URLWithString:urlString];
@@ -126,24 +166,39 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 //						break;//currently don't need to fetch all thumbnails
 //					}
 //				}
-								
-				//get thumbnail
-				
+//								
+//				//get thumbnail
+//				
 				NSArray *thumbnails = [content objectForKey:@"thumbnails"];
 				NSDictionary *thumbnailDict = [thumbnails lastObject];
 				
 				urlString = [thumbnailDict objectForKey:@"url"];
-				if([urlString length] > 0)
-				{
-					url = [NSURL URLWithString:urlString];
-					image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]]; 
-					
-					if(image)
-					{
-						[item setThumbnail:image];
-						break; 	//currently don't need to fetch all thumbnails
-					}
-				}
+                
+                //remove the width param
+                parser = [[[DDURLParser alloc] initWithURLString:urlString] autorelease];
+                y = [parser valueForVariable:@"w"];
+                
+                if(y != nil)
+                {
+                    NSString *width = [NSString stringWithFormat:@"?w=%@", y];
+                    urlString = [urlString stringByReplacingOccurrencesOfString:width withString:@"?w=400"]; 
+                }
+                
+                [item setThumbnailUrl:urlString];
+                
+                
+                
+//				if([urlString length] > 0)
+//				{
+//					url = [NSURL URLWithString:urlString];
+//					image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]]; 
+//					
+//					if(image)
+//					{
+//						[item setThumbnail:image];
+//						break; 	//currently don't need to fetch all thumbnails
+//					}
+//				}
 			}
 		}
 		
@@ -206,62 +261,5 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 	[super dealloc];
 }
 
-
-#pragma mark Singleton Implementation
-//
-// Singleton Pattern Implementation
-//
-//
-+ (NewsFeedController *)sharedController
-{
-    @synchronized(self) 
-	{		
-        if (theSharedController == nil) 
-		{
-            [[self alloc] init]; // assignment not done here
-        }
-    }
-	
-    return theSharedController;
-}
-
-+ (id)allocWithZone:(NSZone *)zone
-{
-    @synchronized(self) 
-	{
-        if (theSharedController == nil) 
-		{
-            theSharedController = [super allocWithZone:zone];
-            return theSharedController;  // assignment and return on first allocation
-        }
-    }
-	
-    return nil; //on subsequent allocation attempts return nil
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return self;	
-}
-
-- (id)retain
-{
-    return self;	
-}
-
-- (unsigned)retainCount
-{
-    return UINT_MAX;  //denotes an object that cannot be released	
-}
-
-- (void)release
-{
-    //do nothing	
-}
-
-- (id)autorelease
-{
-    return self;	
-}
 
 @end

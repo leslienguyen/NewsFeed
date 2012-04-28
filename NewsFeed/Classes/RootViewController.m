@@ -8,10 +8,11 @@
 
 #import "RootViewController.h"
 #import "NewsFeedItem.h"
-#import "NewsFeedController.h"
+#import "FeedDownloader.h"
 #import "FeedTableCell.h"
 #import "ArticleWebViewController.h"
 #import "UIImage+LNExtensions.h"
+#import "ImageCache.h"
 
 #define kArticleGridImageWidth 154.0f
 #define kArticleGridImageHeight 134.0f
@@ -97,7 +98,9 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 	self.cachedImages = [NSMutableDictionary dictionaryWithCapacity:10];
 	
 	// make the first request
-	[[NewsFeedController sharedController] makeRequest];
+	[[FeedDownloader sharedController] downloadFeed:FeedTypeTechcrunch withSuccessBlock:^(NSArray *entries) {
+        
+    }];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsFeedDidChange:) name:NewsFeedDidChangeNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsFeedRequestDidFail:) name:NewsFeedRequestDidFailNotification object:nil];
@@ -166,7 +169,9 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 //TODO: handling previous requests that are not done
 - (void)refreshFeed:(id)sender
 {
-	[[NewsFeedController sharedController] makeRequest];
+	[[FeedDownloader sharedController] downloadFeed:FeedTypeTechcrunch withSuccessBlock:^(NSArray *entries) {
+        
+    }];
 }
 
 - (IBAction)displayDetail:(id)sender;
@@ -205,7 +210,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 		return 1;
 	}
 	
-	NSInteger count = [[[NewsFeedController sharedController] entries] count];
+	NSInteger count = [[[FeedDownloader sharedController] entries] count];
 
 	if(!self.tableFormat)
 	{
@@ -261,7 +266,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 			[cell setSelectionStyle:UITableViewCellSelectionStyleBlue];			
 		}
 		
-		NSArray *entries = [[NewsFeedController sharedController] entries];
+		NSArray *entries = [[FeedDownloader sharedController] entries];
 		
 		if(indexPath.row < [entries count])
 		{
@@ -324,7 +329,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 			indexRight = indexLeft + 1;
 		}
 		
-		NSArray *entries = [[NewsFeedController sharedController] entries];
+		NSArray *entries = [[FeedDownloader sharedController] entries];
 		
 		if(indexLeft < [entries count] )
 		{
@@ -425,29 +430,35 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 - (UIImage*)imageForFeed:(NewsFeedItem*)entry
 {
 	//look for image in cache first
-	UIImage *sizedImage = [self.cachedImages objectForKey:[entry link]];
-	CGSize size;
+	__block UIImage *sizedImage = [self.cachedImages objectForKey:[entry link]];
 	
 	// if image doesnt exist in cache, find it and size it 
 	if(sizedImage == nil)
 	{
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-		{
-			size = (self.tableFormat) ? CGSizeMake(kArticleRowHeightIPad, kArticleRowHeightIPad): CGSizeMake(kArticleGridImageWidthIPad, kArticleGridImageHeightIPad);			
-			sizedImage = [[entry thumbnail] imageByScalingWithAspectFillForSize:size];
-		}
-		else 
-		{
-			size = (self.tableFormat) ?  CGSizeMake(kArticleRowHeight, kArticleRowHeight): CGSizeMake(kArticleGridImageWidth, kArticleGridImageHeight);
-			sizedImage = [[entry thumbnail] imageByScalingWithAspectFillForSize:size];
-		}		
-		
-		if(sizedImage != nil)
-		{
-			// save image to cache
-			[self.cachedImages setObject:sizedImage forKey:[entry link]];
-		}
-	}
+        [[ImageCache sharedCache] fetchImageURL:[entry thumbnailUrl] withBlock:^(UIImage *image, NSString *url) {
+            
+            CGSize size;
+
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
+            {
+                size = (self.tableFormat) ? CGSizeMake(kArticleRowHeightIPad, kArticleRowHeightIPad): CGSizeMake(kArticleGridImageWidthIPad, kArticleGridImageHeightIPad);			
+                sizedImage = [image imageByScalingWithAspectFillForSize:size];
+            }
+            else 
+            {
+                size = (self.tableFormat) ?  CGSizeMake(kArticleRowHeight, kArticleRowHeight): CGSizeMake(kArticleGridImageWidth, kArticleGridImageHeight);
+                sizedImage = [image imageByScalingWithAspectFillForSize:size];
+            }		
+            
+            if(sizedImage != nil)
+            {
+                // save image to cache
+                [self.cachedImages setObject:sizedImage forKey:[entry link]];
+            }
+            
+            [self.tableView reloadData];
+        }];
+    }
 	
 	return sizedImage;	
 }
@@ -552,7 +563,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 	
 	//Create a URL object.
 	
-	NSArray *entries = [[NewsFeedController sharedController] entries];
+	NSArray *entries = [[FeedDownloader sharedController] entries];
 	
 	if(index < [entries count])
 	{

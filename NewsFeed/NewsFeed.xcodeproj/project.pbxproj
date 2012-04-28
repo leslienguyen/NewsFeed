@@ -20,7 +20,6 @@
 		2BA5813B14146F2800CCDBB4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */; };
 		2BA5813D14146F3600CCDBB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5813C14146F3600CCDBB4 /* SystemConfiguration.framework */; };
 		2BA5813F14146F6C00CCDBB4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5813E14146F6C00CCDBB4 /* MobileCoreServices.framework */; };
-		2BA5814114146F6C00CCDBB4 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5814014146F6C00CCDBB4 /* libz.1.2.3.dylib */; };
 		2BA5815614146FA000CCDBB4 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5814314146FA000CCDBB4 /* ASIAuthenticationDialog.m */; };
 		2BA5815714146FA000CCDBB4 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5814614146FA000CCDBB4 /* ASIDataCompressor.m */; };
 		2BA5815814146FA000CCDBB4 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5814814146FA000CCDBB4 /* ASIDataDecompressor.m */; };
@@ -30,7 +29,7 @@
 		2BA5815C14146FA000CCDBB4 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5815214146FA000CCDBB4 /* ASIInputStream.m */; };
 		2BA5815D14146FA000CCDBB4 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5815414146FA000CCDBB4 /* ASINetworkQueue.m */; };
 		2BA5818D1414704B00CCDBB4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5818C1414704B00CCDBB4 /* Reachability.m */; };
-		2BA58192141555AC00CCDBB4 /* NewsFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58191141555AC00CCDBB4 /* NewsFeedController.m */; };
+		2BA58192141555AC00CCDBB4 /* FeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58191141555AC00CCDBB4 /* FeedDownloader.m */; };
 		2BA581D01415765400CCDBB4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA581CF1415765400CCDBB4 /* JSONKit.m */; };
 		2BA581E614157CDC00CCDBB4 /* NewsFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA581E514157CDC00CCDBB4 /* NewsFeedItem.m */; };
 		2BA5821914158D2D00CCDBB4 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BA5821814158D2D00CCDBB4 /* FeedTableCell.xib */; };
@@ -42,6 +41,10 @@
 		2BE2B6D9141DF7080019A427 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B6D7141DF7080019A427 /* Default.png */; };
 		2BE2B6EC141DF9780019A427 /* CrunchTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B6EB141DF9780019A427 /* CrunchTitle.png */; };
 		2BE2B730141DFD640019A427 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2B72F141DFD640019A427 /* Icon.png */; };
+		CEBD69DE154B601B0095C32B /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBD69DD154B601B0095C32B /* libz.1.2.5.dylib */; };
+		CEBD69E5154B6D160095C32B /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD69E4154B66370095C32B /* ImageCache.m */; };
+		CEBD69E9154B6DD10095C32B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD69E7154B6D810095C32B /* NSData+Base64.m */; };
+		CEBD6A02154B84E80095C32B /* DDURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD6A01154B84E80095C32B /* DDURLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +67,6 @@
 		2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2BA5813C14146F3600CCDBB4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2BA5813E14146F6C00CCDBB4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		2BA5814014146F6C00CCDBB4 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		2BA5814214146FA000CCDBB4 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = ASIHTTPRequest/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		2BA5814314146FA000CCDBB4 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = ASIHTTPRequest/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		2BA5814414146FA000CCDBB4 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = ASIHTTPRequest/ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -87,8 +89,8 @@
 		2BA5815514146FA000CCDBB4 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<group>"; };
 		2BA5818B1414704B00CCDBB4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		2BA5818C1414704B00CCDBB4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		2BA58190141555AC00CCDBB4 /* NewsFeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedController.h; sourceTree = "<group>"; };
-		2BA58191141555AC00CCDBB4 /* NewsFeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedController.m; sourceTree = "<group>"; };
+		2BA58190141555AC00CCDBB4 /* FeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDownloader.h; sourceTree = "<group>"; };
+		2BA58191141555AC00CCDBB4 /* FeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDownloader.m; sourceTree = "<group>"; };
 		2BA581CE1415765400CCDBB4 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		2BA581CF1415765400CCDBB4 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		2BA581E414157CDC00CCDBB4 /* NewsFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedItem.h; sourceTree = "<group>"; };
@@ -105,6 +107,13 @@
 		2BE2B6EB141DF9780019A427 /* CrunchTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CrunchTitle.png; path = images/CrunchTitle.png; sourceTree = "<group>"; };
 		2BE2B72F141DFD640019A427 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* NewsFeed-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NewsFeed-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CEBD69DD154B601B0095C32B /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		CEBD69E3154B66370095C32B /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		CEBD69E4154B66370095C32B /* ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		CEBD69E6154B6D810095C32B /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		CEBD69E7154B6D810095C32B /* NSData+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		CEBD6A00154B84E80095C32B /* DDURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDURLParser.h; sourceTree = "<group>"; };
+		CEBD6A01154B84E80095C32B /* DDURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDURLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +121,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBD69DE154B601B0095C32B /* libz.1.2.5.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				2BA5813B14146F2800CCDBB4 /* CFNetwork.framework in Frameworks */,
 				2BA5813D14146F3600CCDBB4 /* SystemConfiguration.framework in Frameworks */,
 				2BA5813F14146F6C00CCDBB4 /* MobileCoreServices.framework in Frameworks */,
-				2BA5814114146F6C00CCDBB4 /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,12 +137,14 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD69E3154B66370095C32B /* ImageCache.h */,
+				CEBD69E4154B66370095C32B /* ImageCache.m */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* NewsFeedAppDelegate.h */,
 				1D3623250D0F684500981E51 /* NewsFeedAppDelegate.m */,
-				2BA58190141555AC00CCDBB4 /* NewsFeedController.h */,
-				2BA58191141555AC00CCDBB4 /* NewsFeedController.m */,
+				2BA58190141555AC00CCDBB4 /* FeedDownloader.h */,
+				2BA58191141555AC00CCDBB4 /* FeedDownloader.m */,
 				2BA581E414157CDC00CCDBB4 /* NewsFeedItem.h */,
 				2BA581E514157CDC00CCDBB4 /* NewsFeedItem.m */,
 				2BA5822214159CEA00CCDBB4 /* FeedTableCell.h */,
@@ -166,10 +177,6 @@
 				2BE2B531141D98D10019A427 /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */,
-				2BA5813C14146F3600CCDBB4 /* SystemConfiguration.framework */,
-				2BA5813E14146F6C00CCDBB4 /* MobileCoreServices.framework */,
-				2BA5814014146F6C00CCDBB4 /* libz.1.2.3.dylib */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -199,6 +206,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD69DD154B601B0095C32B /* libz.1.2.5.dylib */,
+				2BA5813A14146F2800CCDBB4 /* CFNetwork.framework */,
+				2BA5813C14146F3600CCDBB4 /* SystemConfiguration.framework */,
+				2BA5813E14146F6C00CCDBB4 /* MobileCoreServices.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
@@ -247,6 +258,8 @@
 		2BA581891414702B00CCDBB4 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD69FF154B84E80095C32B /* DDURLParser */,
+				CEBD69E8154B6D8D0095C32B /* Base64 */,
 				2BE2B760141E04920019A427 /* JSONKit */,
 				2BA5811E141461CF00CCDBB4 /* ASIHTTPRequest */,
 				2BA5818A1414704B00CCDBB4 /* Reachability */,
@@ -278,6 +291,25 @@
 				2BA581CF1415765400CCDBB4 /* JSONKit.m */,
 			);
 			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		CEBD69E8154B6D8D0095C32B /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD69E6154B6D810095C32B /* NSData+Base64.h */,
+				CEBD69E7154B6D810095C32B /* NSData+Base64.m */,
+			);
+			name = Base64;
+			sourceTree = "<group>";
+		};
+		CEBD69FF154B84E80095C32B /* DDURLParser */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD6A00154B84E80095C32B /* DDURLParser.h */,
+				CEBD6A01154B84E80095C32B /* DDURLParser.m */,
+			);
+			name = DDURLParser;
+			path = Classes/DDURLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +381,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBD69E9154B6DD10095C32B /* NSData+Base64.m in Sources */,
+				CEBD69E5154B6D160095C32B /* ImageCache.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* NewsFeedAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
@@ -361,13 +395,14 @@
 				2BA5815C14146FA000CCDBB4 /* ASIInputStream.m in Sources */,
 				2BA5815D14146FA000CCDBB4 /* ASINetworkQueue.m in Sources */,
 				2BA5818D1414704B00CCDBB4 /* Reachability.m in Sources */,
-				2BA58192141555AC00CCDBB4 /* NewsFeedController.m in Sources */,
+				2BA58192141555AC00CCDBB4 /* FeedDownloader.m in Sources */,
 				2BA581D01415765400CCDBB4 /* JSONKit.m in Sources */,
 				2BA581E614157CDC00CCDBB4 /* NewsFeedItem.m in Sources */,
 				2BA5822414159CEA00CCDBB4 /* FeedTableCell.m in Sources */,
 				2BA5826D1415AE8100CCDBB4 /* NSNotificationCenter+LNExtension.m in Sources */,
 				2B7901F6141731820025F1F3 /* ArticleWebViewController.m in Sources */,
 				2B9FCE96141C40C1000022AD /* UIImage+LNExtensions.m in Sources */,
+				CEBD6A02154B84E80095C32B /* DDURLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

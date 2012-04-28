@@ -8,7 +8,7 @@
 
 #import "NewsFeedAppDelegate.h"
 #import "RootViewController.h"
-#import "NewsFeedController.h"
+#import "FeedDownloader.h"
 
 
 @implementation NewsFeedAppDelegate
@@ -46,7 +46,7 @@
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
 	
-	[[NewsFeedController sharedController] saveCache];	
+	[[FeedDownloader sharedController] saveCache];	
 }
 
 
@@ -66,7 +66,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
-	[[NewsFeedController sharedController] saveCache];	
+	[[FeedDownloader sharedController] saveCache];	
 }
 
 

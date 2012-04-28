@@ -27,6 +27,8 @@ static NSString *kNewsFeedItemImageKey=@"kNewsFeedItemImageKey";
 @synthesize content = myContent;
 @synthesize image = myImage;
 @synthesize thumbnail = myThumbnail;
+@synthesize imageUrl = myImageUrl;
+@synthesize thumbnailUrl = myThumbnailUrl;
 
 #pragma mark NSCoding
 
