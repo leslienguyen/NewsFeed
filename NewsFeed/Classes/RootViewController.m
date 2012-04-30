@@ -44,6 +44,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 @property(nonatomic, readwrite, getter=isTableFormat, assign) BOOL tableFormat;
 @property(nonatomic, readwrite, retain) NSMutableDictionary *cachedImages;
 @property(nonatomic, readwrite, retain) NSString *errorString;
+@property(nonatomic, readwrite, retain) UIActivityIndicatorView *spinner;
 
 @end
 
@@ -53,6 +54,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 @synthesize tableFormat = myTableFormat;
 @synthesize cachedImages = myCachedImages;
 @synthesize errorString = myErrorString;
+@synthesize spinner = mySpinner;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -63,11 +65,6 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
     [super viewDidLoad];
 	
 	[self setTitle:@"LesCrunch"];
-	
-	//Customizing the nav bar
-	UIColor *aColor = [UIColor colorWithRed:44.0f/255.0f green:167.0f/255.0f blue:48.0f/255.0f alpha:1.000];
-	UINavigationBar *bar = [[self navigationController] navigationBar];
-	[bar setTintColor:aColor];
 		
 	// Right bar button
 	UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
@@ -79,7 +76,6 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 	// Left bar button
 
 	UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Grid", @"Table", nil]];
-	[segControl setTintColor:aColor];
 	[segControl setSegmentedControlStyle:UISegmentedControlStyleBar];	
 	[segControl addTarget:self action:@selector(changeFormat:) forControlEvents:UIControlEventValueChanged];
 	
@@ -93,10 +89,32 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 	
 	[segControl release];
 	[segBarItem release];	
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bar_bg"] forBarMetrics:UIBarMetricsDefault];
+        
+        self.view.backgroundColor = RGBCOLOR(244, 244, 244);
+        
+        //Customizing the nav bar
+        UIColor *aColor = RGBCOLOR(200, 200, 200);
+        UINavigationBar *bar = [[self navigationController] navigationBar];
+        [bar setTintColor:aColor];
+        
+        [segControl setTintColor:aColor];
+    }
 	
 	[self setTableFormat:layoutIndex];
 	self.cachedImages = [NSMutableDictionary dictionaryWithCapacity:10];
 	
+    mySpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    mySpinner.color = [UIColor grayColor];
+    mySpinner.center = CGPointMake(self.view.bounds.size.width/2.0f, 100);
+    [mySpinner hidesWhenStopped];
+    
+    [self.view addSubview:mySpinner];
+    [mySpinner startAnimating];
+    
 	// make the first request
 	[[FeedDownloader sharedController] downloadFeed:FeedTypeTechcrunch withSuccessBlock:^(NSArray *entries) {
         
@@ -156,6 +174,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 {
 	self.errorString = nil;
 	[self.cachedImages removeAllObjects];
+    [self.spinner stopAnimating];
 	[self.tableView reloadData];
 }
 
@@ -163,12 +182,14 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 {
 	self.errorString = [[note userInfo] objectForKey:NewsFeedErrorKey];
 	[self.cachedImages removeAllObjects];
+    [self.spinner stopAnimating];
 	[self.tableView reloadData];
 }
 
 //TODO: handling previous requests that are not done
 - (void)refreshFeed:(id)sender
 {
+    [self.spinner startAnimating];
 	[[FeedDownloader sharedController] downloadFeed:FeedTypeTechcrunch withSuccessBlock:^(NSArray *entries) {
         
     }];
@@ -276,8 +297,6 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 			
 			cell.detailTextLabel.text = [entry summary];
 			
-			
-			
 			cell.imageView.image = [self imageForFeed:entry];
 		}
 		
@@ -359,7 +378,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
 			}
 		}
 		
-		// the middle articale is only for iPad
+		// the middle article is only for iPad
 		
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
 		{			
@@ -456,7 +475,7 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
                 [self.cachedImages setObject:sizedImage forKey:[entry link]];
             }
             
-            [self.tableView reloadData];
+            //[self.tableView reloadData];
         }];
     }
 	

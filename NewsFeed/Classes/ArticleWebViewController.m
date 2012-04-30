@@ -30,21 +30,20 @@
 		self.webView.scalesPageToFit = YES;
 		
 		self.loadingIndicator = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];
-		CGSize indicatorSize = CGSizeMake(50.0f, 50.0f);
-		self.loadingIndicator.frame = CGRectMake(0.0f, 0.0f, indicatorSize.width, indicatorSize.height);
+        self.loadingIndicator.color = [UIColor grayColor];
+        self.loadingIndicator.hidesWhenStopped = YES;
 	}
 	
 	return self;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidLoad 
 {
-	[super viewDidAppear:animated];
+	[super viewDidLoad];
 	
 	// Center the loading indicator.
-	UIWindow *window = [self.view window];
-	self.loadingIndicator.center = window.center;
-	[window addSubview:self.loadingIndicator];
+    self.loadingIndicator.center = CGPointMake(384.0f, 100.0f);
+	[self.view addSubview:self.loadingIndicator];
 }
 
 

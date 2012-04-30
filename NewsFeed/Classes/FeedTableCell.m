@@ -7,7 +7,7 @@
 //
 
 #import "FeedTableCell.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation FeedTableCell
 
@@ -28,6 +28,27 @@
 @synthesize bigTitleRight = myBigTitleRight;
 @synthesize bigTitleViewRight = myBigTitleViewRight;
 @synthesize imageViewRight = myImageViewRight;
+
+- (void)viewDidLoad
+{
+    self.backgroundColor = RGBCOLOR(244, 244, 244);
+    self.buttonLeft.backgroundColor = RGBCOLOR(200, 200, 200);
+    self.buttonLeft.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.buttonLeft.layer.borderWidth = 1.0f;
+    
+    
+    self.imageViewLeft.backgroundColor = RGBCOLOR(200, 200, 200);
+    self.imageViewLeft.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.imageViewLeft.layer.borderWidth = 1.0f;
+    
+    self.imageViewMiddle.backgroundColor = RGBCOLOR(200, 200, 200);
+    self.imageViewMiddle.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.imageViewMiddle.layer.borderWidth = 1.0f;
+    
+    self.imageViewRight.backgroundColor = RGBCOLOR(200, 200, 200);
+    self.imageViewRight.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.imageViewRight.layer.borderWidth = 1.0f;
+}
 
 - (void)dealloc
 {

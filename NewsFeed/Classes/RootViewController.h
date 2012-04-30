@@ -16,6 +16,7 @@
 	FeedTableCell *myTvCell;
 	NSMutableDictionary *myCachedImages;
 	NSString *myErrorMessage;
+    UIActivityIndicatorView *mySpinner;
 }
 
 - (IBAction)displayDetail:(id)sender;

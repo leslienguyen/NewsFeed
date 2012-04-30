@@ -137,8 +137,8 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 			if([medium isEqualToString:@"image"])
 			{
 				NSString *urlString = nil;
-				NSURL *url = nil;
-				UIImage *image = nil;
+//				NSURL *url = nil;
+//				UIImage *image = nil;
 			
 				//get the image
 				urlString = [content objectForKey:@"url"];
