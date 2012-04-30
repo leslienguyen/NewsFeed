@@ -2,93 +2,49 @@
 //  RootViewController.m
 //  NewsFeed
 //
-//  Created by Leslie Nguyen on 9/4/11.
-//  Copyright 2011 Leslie Nguyen. All rights reserved.
+//  Created by Leslie Nguyen on 4/30/12.
+//  Copyright 2012 Leslie Nguyen. All rights reserved.
 //
 
 #import "RootViewController.h"
-#import "NewsFeedItem.h"
-#import "FeedDownloader.h"
-#import "FeedTableCell.h"
-#import "ArticleWebViewController.h"
-#import "UIImage+LNExtensions.h"
-#import "ImageCache.h"
+#import "GridViewController.h"
+#import "Common.h"
 
-#define kArticleGridImageWidth 154.0f
-#define kArticleGridImageHeight 134.0f
-#define kArticleRowHeight 44.0f
-#define kArticleGridHeight  138.0f
+#define kTableRowTechcrunch 0
+#define kTableRowGizmodo 1
+#define kTableRowEngadget 2
+#define kTableRowReddit 3
+#define kTableRowAtlantic 4
+#define kTableRowNYTimes 5
 
-#define kArticleGridImageWidthIPad 248.0f
-#define kArticleGridImageHeightIPad 234.0f
-#define kArticleRowHeightIPad 88.0f
-#define kArticleGridHeightIPad 240.0f
+#define kTableRowCount kTableRowNYTimes+1
 
-#define kNewsFeedLayoutGrid 0
-#define kNewsFeedLayoutTable 1
-
-#define kNewsFeedNumberOfArticlePerRow 2
-#define kNewsFeedNumberOfArticlePerRowIPad 3
-
-NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
-
-@interface RootViewController() 
-
-- (void)newsFeedDidChange:(NSNotification*)note;
-- (void)newsFeedRequestDidFail:(NSNotification*)note;
-- (void)refreshFeed:(id)sender;
-- (void)displayDetailForIndex:(NSUInteger)index;
-- (UIImage*)imageForFeed:(NewsFeedItem*)entry;
-- (void)changeFormat:(id)sender;
-
-@property(nonatomic, readwrite, getter=isTableFormat, assign) BOOL tableFormat;
-@property(nonatomic, readwrite, retain) NSMutableDictionary *cachedImages;
-@property(nonatomic, readwrite, retain) NSString *errorString;
-@property(nonatomic, readwrite, retain) UIActivityIndicatorView *spinner;
+@interface RootViewController ()
 
 @end
 
-
 @implementation RootViewController
-@synthesize tvCell = myTvCell;
-@synthesize tableFormat = myTableFormat;
-@synthesize cachedImages = myCachedImages;
-@synthesize errorString = myErrorString;
-@synthesize spinner = mySpinner;
 
-#pragma mark -
-#pragma mark View lifecycle
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) 
+    {
+        // Custom initialization
+    }
+    return self;
+}
 
+- (id)init
+{
+    return [self initWithStyle:UITableViewStylePlain];
+}
 
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	[self setTitle:@"LesCrunch"];
-		
-	// Right bar button
-	UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
-																			target:self 
-																			action:@selector(refreshFeed:)];
-	self.navigationItem.rightBarButtonItem = button;
-	[button release];
-	
-	// Left bar button
-
-	UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Grid", @"Table", nil]];
-	[segControl setSegmentedControlStyle:UISegmentedControlStyleBar];	
-	[segControl addTarget:self action:@selector(changeFormat:) forControlEvents:UIControlEventValueChanged];
-	
-	//If the key does not exist, this method returns 0, which defaults us to grid layout
-	NSUInteger layoutIndex = [[NSUserDefaults standardUserDefaults] integerForKey:NewsFeedLayoutKey];
-							
-	[segControl setSelectedSegmentIndex:layoutIndex];
-	
-	UIBarButtonItem *segBarItem = [[UIBarButtonItem alloc] initWithCustomView:segControl];
-	self.navigationItem.leftBarButtonItem = segBarItem;
-	
-	[segControl release];
-	[segBarItem release];	
+    
+    self.title = @"LesCrunch";
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
@@ -97,536 +53,152 @@ NSString *NewsFeedLayoutKey = @"NewsFeedLayoutKey";
         self.view.backgroundColor = RGBCOLOR(244, 244, 244);
         
         //Customizing the nav bar
-        UIColor *aColor = RGBCOLOR(200, 200, 200);
+        UIColor *aColor = RGBCOLOR(150, 150, 150);
         UINavigationBar *bar = [[self navigationController] navigationBar];
         [bar setTintColor:aColor];
         
-        [segControl setTintColor:aColor];
     }
-	
-	[self setTableFormat:layoutIndex];
-	self.cachedImages = [NSMutableDictionary dictionaryWithCapacity:10];
-	
-    mySpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    mySpinner.color = [UIColor grayColor];
-    mySpinner.center = CGPointMake(self.view.bounds.size.width/2.0f, 100);
-    [mySpinner hidesWhenStopped];
-    
-    [self.view addSubview:mySpinner];
-    [mySpinner startAnimating];
-    
-	// make the first request
-	[[FeedDownloader sharedController] downloadFeed:FeedTypeTechcrunch withSuccessBlock:^(NSArray *entries) {
-        
-    }];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsFeedDidChange:) name:NewsFeedDidChangeNotification object:nil];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsFeedRequestDidFail:) name:NewsFeedRequestDidFailNotification object:nil];
-
 }
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-	[super viewDidDisappear:animated];
-}
-*/
-
-/*
- // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
- */
-
-- (void)setTableFormat:(BOOL)enabled
+- (void)viewDidUnload
 {
-	if(enabled)
-	{
-		self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-	}
-	else 
-	{
-		self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	}	
-	
-	myTableFormat = enabled;
-	
-	[self.tableView reloadData];
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
-- (void)newsFeedDidChange:(NSNotification*)note
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	self.errorString = nil;
-	[self.cachedImages removeAllObjects];
-    [self.spinner stopAnimating];
-	[self.tableView reloadData];
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)newsFeedRequestDidFail:(NSNotification*)note
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	self.errorString = [[note userInfo] objectForKey:NewsFeedErrorKey];
-	[self.cachedImages removeAllObjects];
-    [self.spinner stopAnimating];
-	[self.tableView reloadData];
-}
-
-//TODO: handling previous requests that are not done
-- (void)refreshFeed:(id)sender
-{
-    [self.spinner startAnimating];
-	[[FeedDownloader sharedController] downloadFeed:FeedTypeTechcrunch withSuccessBlock:^(NSArray *entries) {
-        
-    }];
-}
-
-- (IBAction)displayDetail:(id)sender;
-{
-	UIButton *button = (UIButton *)sender;
-	NSUInteger index = button.tag;
-		
-	[self displayDetailForIndex:index];	
-}
-
-- (void)changeFormat:(id)sender
-{
-	[self.cachedImages removeAllObjects];
-
-	UISegmentedControl *control = (UISegmentedControl*)sender;
-	NSUInteger index = [control selectedSegmentIndex];
-	
-	[self setTableFormat:index];
-
-}
-
-#pragma mark -
-#pragma mark Table view data source
-
-// Customize the number of sections in the table view.
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
     return 1;
 }
 
-
-// Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	
-	if(self.errorString)
-	{
-		return 1;
-	}
-	
-	NSInteger count = [[[FeedDownloader sharedController] entries] count];
-
-	if(!self.tableFormat)
-	{
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-		{
-			float f = count/kNewsFeedNumberOfArticlePerRowIPad;
-			NSInteger numberOfEntries = f + 0.5;
-			return numberOfEntries;
-		}
-		else 
-		{
-			float f = count/kNewsFeedNumberOfArticlePerRow;
-			NSInteger numberOfEntries = f + 0.5;
-			return numberOfEntries;
-		}
-
-	}
-	
-	return count;
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-       
-	if(self.errorString)
-	{
-		static NSString *NormalCellIdentifier = @"ErrorFeedCell";
-		
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NormalCellIdentifier];
-		
-		if (cell == nil) {
-			
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NormalCellIdentifier];
-			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		}
-		
-		[cell.textLabel setText:self.errorString];
-		
-		return cell;
-	}
-		
-	if(self.tableFormat)
-	{		
-		static NSString *NormalCellIdentifier = @"NormalFeedCell";
-		
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NormalCellIdentifier];
-		
-		if (cell == nil) {
-			
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NormalCellIdentifier];
-			
-			[cell setSelectionStyle:UITableViewCellSelectionStyleBlue];			
-		}
-		
-		NSArray *entries = [[FeedDownloader sharedController] entries];
-		
-		if(indexPath.row < [entries count])
-		{
-			NewsFeedItem *entry = [entries objectAtIndex:indexPath.row];
-			
-			cell.textLabel.text = [entry title];
-			
-			cell.detailTextLabel.text = [entry summary];
-			
-			cell.imageView.image = [self imageForFeed:entry];
-		}
-		
-		return cell;
-	}
-	
-	else
-	{
-		static NSString *GridCellIdentifier = @"GridFeedCell";
-
-		FeedTableCell *cell = (FeedTableCell*)[tableView dequeueReusableCellWithIdentifier:GridCellIdentifier];
-		if (cell == nil) 
-		{
-			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-			{
-				[[NSBundle mainBundle] loadNibNamed:@"FeedTableCell-iPad" owner:self options:nil];
-			}
-			else 
-			{
-				[[NSBundle mainBundle] loadNibNamed:@"FeedTableCell" owner:self options:nil];
-
-			}
-			
-			cell = self.tvCell;
-			
-			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-			
-			self.tvCell = nil;		
-		}
-		
-		// Configure the cell.
-		
-		// For iPad: 3 articles per row
-		// For iPhone: 2 articles per row
-		
-		NSUInteger indexLeft;
-		NSUInteger indexMiddle;
-		NSUInteger indexRight;
-		
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-		{			
-			indexLeft = indexPath.row * kNewsFeedNumberOfArticlePerRowIPad;
-			indexMiddle = indexLeft + 1;
-			indexRight = indexLeft + 2;
-		}
-		else 
-		{
-			indexLeft = indexPath.row * kNewsFeedNumberOfArticlePerRow;
-			indexRight = indexLeft + 1;
-		}
-		
-		NSArray *entries = [[FeedDownloader sharedController] entries];
-		
-		if(indexLeft < [entries count] )
-		{
-			NewsFeedItem *entry = [entries objectAtIndex:indexLeft];
-
-			UIButton *button = [cell buttonLeft];
-			button.tag = indexLeft;						
-
-			UIImage *sizedImage = [self imageForFeed:entry];
-			
-			// if there is an image display it
-			if(sizedImage)
-			{
-				[button setImage:sizedImage forState:UIControlStateNormal];
-				
-				[cell.titleLeft setText:[entry title]];				
-				[cell.bigTitleLeft setHidden:YES];
-				[cell.bigTitleViewLeft setHidden:YES];
-			}
-			else 
-			{
-				[button setImage:nil forState:UIControlStateNormal];
-				[cell.bigTitleLeft setHidden:NO];
-				[cell.bigTitleViewLeft setHidden:NO];
-				[cell.bigTitleLeft setText:[entry title]];
-				[cell.titleLeft setText:[entry author]];
-			}
-		}
-		
-		// the middle article is only for iPad
-		
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-		{			
-			if(indexMiddle < [entries count])
-			{
-				NewsFeedItem *entry = [entries objectAtIndex:indexMiddle];
-				
-				UIButton *button = [cell buttonMiddle];
-				button.tag = indexMiddle;						
-				
-				UIImage *sizedImage = [self imageForFeed:entry];
-				
-				// if there is an image display it
-				if(sizedImage)
-				{		
-					[button setImage:sizedImage forState:UIControlStateNormal];
-					
-					[cell.titleMiddle setText:[entry title]];				
-					[cell.bigTitleMiddle setHidden:YES];
-					[cell.bigTitleViewMiddle setHidden:YES];
-					
-				}
-				else 
-				{
-					[button setImage:nil forState:UIControlStateNormal];
-					[cell.bigTitleMiddle setHidden:NO];
-					[cell.bigTitleViewMiddle setHidden:NO];
-					[cell.bigTitleMiddle setText:[entry title]];
-					[cell.titleMiddle setText:[entry author]];
-				}
-			}
-		}
-		
-		if(indexRight < [entries count])
-		{
-			NewsFeedItem *entry = [entries objectAtIndex:indexRight];
-			
-			UIButton *button = [cell buttonRight];
-			button.tag = indexRight;						
-
-			UIImage *sizedImage = [self imageForFeed:entry];
-			
-			// if there is an image display it
-			if(sizedImage)
-			{		
-				[button setImage:sizedImage forState:UIControlStateNormal];
-				
-				[cell.titleRight setText:[entry title]];				
-				[cell.bigTitleRight setHidden:YES];
-				[cell.bigTitleViewRight setHidden:YES];
-
-			}
-			else 
-			{
-				[button setImage:nil forState:UIControlStateNormal];
-				[cell.bigTitleRight setHidden:NO];
-				[cell.bigTitleViewRight setHidden:NO];
-				[cell.bigTitleRight setText:[entry title]];
-				[cell.titleRight setText:[entry author]];
-			}
-		}	
-		
-		return cell;
-	}
-
-}
-
-- (UIImage*)imageForFeed:(NewsFeedItem*)entry
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	//look for image in cache first
-	__block UIImage *sizedImage = [self.cachedImages objectForKey:[entry link]];
-	
-	// if image doesnt exist in cache, find it and size it 
-	if(sizedImage == nil)
-	{
-        [[ImageCache sharedCache] fetchImageURL:[entry thumbnailUrl] withBlock:^(UIImage *image, NSString *url) {
-            
-            CGSize size;
-
-            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-            {
-                size = (self.tableFormat) ? CGSizeMake(kArticleRowHeightIPad, kArticleRowHeightIPad): CGSizeMake(kArticleGridImageWidthIPad, kArticleGridImageHeightIPad);			
-                sizedImage = [image imageByScalingWithAspectFillForSize:size];
-            }
-            else 
-            {
-                size = (self.tableFormat) ?  CGSizeMake(kArticleRowHeight, kArticleRowHeight): CGSizeMake(kArticleGridImageWidth, kArticleGridImageHeight);
-                sizedImage = [image imageByScalingWithAspectFillForSize:size];
-            }		
-            
-            if(sizedImage != nil)
-            {
-                // save image to cache
-                [self.cachedImages setObject:sizedImage forKey:[entry link]];
-            }
-            
-            //[self.tableView reloadData];
-        }];
-    }
-	
-	return sizedImage;	
+    // Return the number of rows in the section.
+    return kTableRowCount;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    switch (indexPath.row) {
+        case kTableRowReddit:
+            cell.textLabel.text = @"Reddit";
+            break;
+        case kTableRowGizmodo:
+            cell.textLabel.text = @"Gizmodo";
+            break;           
+        case kTableRowTechcrunch:
+            cell.textLabel.text = @"TechCrunch";
+            break; 
+        case kTableRowEngadget:
+            cell.textLabel.text = @"Engadget";
+            break; 
+        case kTableRowNYTimes:
+            cell.textLabel.text = @"NY Times";
+            break;
+        case kTableRowAtlantic:
+            cell.textLabel.text = @"The Atlantic";
+            break;
+        default:
+            break;
+    }
+    
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
 */
 
-
 /*
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
+        // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
 */
 
-
 /*
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
 }
 */
 
-
 /*
 // Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
 */
 
+#pragma mark - Table view delegate
 
-#pragma mark -
-#pragma mark Table view delegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	CGFloat height;
-	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) 
-	{
-		if(self.tableFormat)
-		{
-			height = kArticleRowHeightIPad;
-		}
-		else 
-		{
-			height = kArticleGridHeightIPad;
-		}
-	}
-	else 
-	{
-		if(self.tableFormat)
-		{
-
-			height = kArticleRowHeight;
-		}
-		else 
-		{
-			height = kArticleGridHeight;
-		}
-	}
-
-	return height;
-}
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	if(self.tableFormat)
-	{
-		return indexPath;
-	}
-	
-	return nil;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GridViewController *gridViewController = [[GridViewController alloc] init];
     
-	if(self.tableFormat)
-	{
-		[self displayDetailForIndex:indexPath.row];
-	}
+    switch (indexPath.row) {
+        case kTableRowReddit:
+            gridViewController.feedType = FeedTypeReddit;
+            gridViewController.title = @"Reddit";
+            break;
+        case kTableRowGizmodo:
+            gridViewController.feedType = FeedTypeGizmodo;
+            gridViewController.title = @"Gizmodo";
+            break;           
+        case kTableRowTechcrunch:
+            gridViewController.feedType = FeedTypeTechcrunch;
+            gridViewController.title = @"TechCrunch";
+            break; 
+        case kTableRowEngadget:
+            gridViewController.feedType = FeedTypeEngadget;
+            gridViewController.title = @"Engadget";
+            break; 
+        case kTableRowNYTimes:
+            gridViewController.feedType = FeedTypeNYTimes;
+            gridViewController.title = @"NY Times";
+            break;
+        case kTableRowAtlantic:
+            gridViewController.feedType = FeedTypeAtlantic;
+            gridViewController.title = @"The Atlantic";
+            break;
+        default:
+            break;  
+    }
+            
+     [self.navigationController pushViewController:gridViewController animated:YES];
+     [gridViewController release];
 }
-	
-	
-- (void)displayDetailForIndex:(NSUInteger)index
-{
-	ArticleWebViewController *detailViewController = [[[ArticleWebViewController alloc] init] autorelease];
-	
-	//Create a URL object.
-	
-	NSArray *entries = [[FeedDownloader sharedController] entries];
-	
-	if(index < [entries count])
-	{
-		NewsFeedItem *entry = [entries objectAtIndex:index];
-		NSURL *url = [entry link];
-		
-		//URL Request Object
-		NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-		
-		//Load the request in the UIWebView.
-		[detailViewController loadRequest:requestObj];
-				
-		[self.navigationController pushViewController:detailViewController animated:YES];	 		
-	}
-}
-		
-
-
-#pragma mark -
-#pragma mark Memory management
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
-}
-
-
-- (void)dealloc 
-{
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	
-	[myCachedImages release]; myCachedImages = nil;
-	[myErrorString release]; myErrorString = nil;
-	
-    [super dealloc];
-}
-
 
 @end
-

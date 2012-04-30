@@ -12,6 +12,9 @@
 #import "NewsFeedItem.h"
 #import "NSNotificationCenter+LNExtension.h"
 #import "DDURLParser.h"
+#import "NSDictionary+Extensions.h"
+
+#define kFeedDownloaderArticleCount 30
 
 static FeedDownloader *theSharedController = nil;
 
@@ -60,11 +63,28 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 
 - (void)downloadFeed:(FeedType)type withSuccessBlock:(FeedBlock)block
 {
+    //remove all old entries
+	[self.entries removeAllObjects];
+    
     switch (type) {
         case FeedTypeTechcrunch:
             [self makeRequest:@"http://feeds.feedburner.com/TechCrunch"];
             break;
-            
+        case FeedTypeGizmodo:
+            [self makeRequest:@"http://www.gizmodo.com/index.xml"];
+            break;
+        case FeedTypeReddit:
+            [self makeRequest:@"http://www.reddit.com/.rss"];
+            break;
+        case FeedTypeEngadget:
+            [self makeRequest:@"http://www.engadget.com/rss.xml"];
+            break;
+        case FeedTypeNYTimes:
+            [self makeRequest:@"http://feeds.nytimes.com/nyt/rss/World"];
+            break;
+        case FeedTypeAtlantic:
+            [self makeRequest:@"http://feeds.feedburner.com/TheAtlanticWire?format=json"];
+            break;
         default:
             break;
     }
@@ -77,7 +97,7 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	NSLog(@"[NewsFeedController makeRequest:]");
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/feed/load?q=%@&v=1.0&output=json&num=18", feedString]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/feed/load?q=%@&v=1.0&output=json&num=%d", feedString, kFeedDownloaderArticleCount]];
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
 	[request setDelegate:self];
 	[request startAsynchronous];	
@@ -89,7 +109,7 @@ NSString *NewsFeedPathString = @"NewsFeedEntries";
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-	NSLog(@"[NewsFeedController requestFailed:]");
+	NSLog(@"[NewsFeedController requestFinished:]");
 	
 	//remove all old entries
 	[self.entries removeAllObjects];

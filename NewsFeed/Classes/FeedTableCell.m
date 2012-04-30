@@ -7,6 +7,7 @@
 //
 
 #import "FeedTableCell.h"
+#import "Common.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation FeedTableCell

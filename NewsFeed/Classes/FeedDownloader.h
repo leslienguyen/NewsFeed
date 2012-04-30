@@ -18,11 +18,16 @@ typedef void(^FeedBlock)(NSArray *);
 
 typedef enum {
     FeedTypeTechcrunch,
-    FeedTypeGizmodo
+    FeedTypeGizmodo,
+    FeedTypeReddit,
+    FeedTypeEngadget,
+    FeedTypeNYTimes,
+    FeedTypeAtlantic
 } FeedType;
 
 @interface FeedDownloader : NSObject <ASIHTTPRequestDelegate>
 {
+    NSMutableDictionary *myFeeds;
 	NSMutableArray *myEntries;
 }
 

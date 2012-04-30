@@ -37,7 +37,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUITableViewCell" id="871402388">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">319</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -378,7 +378,6 @@
 												<int key="NSvFlags">292</int>
 												<string key="NSFrame">{{3, 180}, {242, 54}}</string>
 												<reference key="NSSuperview" ref="106073208"/>
-												<reference key="NSNextKeyView"/>
 												<reference key="IBUIBackgroundColor" ref="1060557302"/>
 												<bool key="IBUIOpaque">NO</bool>
 												<bool key="IBUIClipsSubviews">YES</bool>
@@ -427,7 +426,6 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{768, 240}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="761798730"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -817,7 +815,7 @@
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>RootViewController</string>
+					<string>GridViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
